@@ -61,7 +61,7 @@
                                     <option value="3" href="#">Pengurus</a>
                                     <option value="4" href="#">Keuangan</a>
                                     <option value="5" href="#">Perlengkapan</a>
-                                </div>
+                                </select>
                             </div>
                             <div class="form-group{{ $errors->has('password') ? ' has-danger' : '' }}">
                                 <div class="input-group input-group-alternative">
