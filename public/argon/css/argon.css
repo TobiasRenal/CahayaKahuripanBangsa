@@ -655,7 +655,7 @@ mark,
 {
     max-width: 70%;
     height: auto;
-    margin-left: auto;
+    margin-left: 40%;
     margin-right: auto;
 }
 
@@ -15409,7 +15409,7 @@ button.section-darker:focus
 
 .bg-gradient-primary
 {
-    background: linear-gradient(87deg, #28166F 0, #ffffff 100%) !important;
+    background: linear-gradient(87deg, #28166F 0, #1893D6 100%) !important;
 }
 
 .bg-gradient-secondary

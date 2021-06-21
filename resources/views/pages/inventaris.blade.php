@@ -54,27 +54,6 @@
                     <i class="ni ni-tv-2 text-primary"></i> Dashboard
                 </a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link active" href="#navbar-examples" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="navbar-examples">
-                    <i class="ni ni-calendar-grid-58" style="color: #f4645f;"></i>
-                    <span class="nav-link-text" style="color: #f4645f;">Jadwal</span>
-                </a>
-
-                <div class="collapse hide" id="navbar-examples">
-                    <ul class="nav nav-sm flex-column">
-                        <li class="nav-item">
-                            <a class="nav-link" href="/profile">
-                                Rapat
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/proker">
-                                Event
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </li>
 
             <li class="nav-item">
                 <a class="nav-link" href="#">
@@ -101,12 +80,6 @@
                         <i class="ni ni-money-coins text-green"></i> Keuangan
                     </a>
                 </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{ route('table') }}">
-                  <i class="ni ni-bullet-list-67 text-default"></i>
-                  <span class="nav-link-text">Tables</span>
-                </a>
-              </li>
         </ul>
           </ul>
         </div>
@@ -357,14 +330,7 @@
         <div class="header-body">
           <div class="row align-items-center py-4">
             <div class="col-lg-6 col-7">
-              <h6 class="h2 text-white d-inline-block mb-0">Icons</h6>
-              <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
-                <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
-                  <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
-                  <li class="breadcrumb-item"><a href="#">Components</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">Icons</li>
-                </ol>
-              </nav>
+              <h1 class="h1 text-white d-inline-block mb-0">Inventaris</h1>
             </div>
             <div class="col-lg-6 col-5 text-right">
               <a href="#" class="btn btn-sm btn-neutral">New</a>
