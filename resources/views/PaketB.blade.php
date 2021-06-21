@@ -54,7 +54,7 @@
                                             <a class="dropdown-item" href="/paketa">Paket A (Setara SD)</a>
                                         </li>
                                         <li>
-                                            <a class="dropdown-item" href="/paketb">Paket B (Setara SMP)</a>
+                                            <a class="dropdown-item" href="#">Paket B (Setara SMP)</a>
                                         </li>
                                         <li>
                                             <a class="dropdown-item" href="#">Paket C (Setara SMA)</a>
@@ -67,11 +67,11 @@
                                         </li>
                                     </ul>
                                 </li>
-                                <li><a class="dropdown-item" href="/inggris">Kursus Bahasa Inggris</a></li>
+                                <li><a class="dropdown-item" href="#page-top">Kursus Bahasa Inggris</a></li>
                                 <li><a class="dropdown-item" href="/komputer">Kursus Komputer</a></li>
                                 <li><a class="dropdown-item" href="/musik">Kursus Musik</a></li>
                                 <li><a class="dropdown-item" href="/kober">Kober Cahaya Bintang</a></li>
-                                <li><a class="dropdown-item" href="#page-top">Taekwondo</a></li>
+                                <li><a class="dropdown-item" href="/taekwondo">Taekwondo</a></li>
                                 <li><a class="dropdown-item" href="/karate">Karate INKAI</a></li>
                             </ul>
                             </li>
@@ -92,7 +92,7 @@
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-lg-8 text-center">
-                        <h2 class="text-white mt-0">Taekwondo</h2>
+                        <h2 class="text-white mt-0">Paket B (setara SMP)</h2>
                     </div>
                 </div>
             </div>
@@ -101,50 +101,59 @@
         <section class="page-section" id="services">
             <div class="container px-4 px-lg-5">
                 <p class="mb-4">
-                    Sebagai sarana warga belajar PKBM CKB dan masyarakat umum untuk mengembangkan diri, mengekspresikan diri, berprestasi, berolahraga, berkomunitas sosial, dan pendidikan karakter, PKBM Cahaya Kahuripan Bangsa menyelenggarakan kegiatan Taekwondo.
+                    PKBM Cahaya Kahuripan Bangsa senantiasa menyesuaikan diri dengan dinamika perkembangan masyarakat, 
+                    baik di tingkat lokal, nasional, maupun tingkat masyarakat global khususnya dalam rangka mewujudkan fungsi dan tujuan pendidikan nasional. 
+                    Bersamaan dengan itu, dalam rangka meningkatkan mutu dan daya saing bangsa, pemerintah telah melakukan pengaturan 
+                    kembali kurikulum dengan diterbitkannya Permendikbud No. 24 Tahun 2016 tentang kompetensi inti dan kompetensi dasar pelajaran pada kurikulum 
+                    2013 di tingkat pendidikan dasar dan pendidikan menengah.
                 </p>
                 <p class="mb-4">
-                    Kegiatan Taekwondo termasuk ke dalam rumpun kegiatan pengembangan diri (jika di sekolah formal sering disebut ekstrakurikuler) di luar kursus, PAUD, dan kesetaraan, dan dapat diikuti oleh masyarakat umum maupun warga belajar PKBM CKB.
+                    Pendidikan kesetaraan adalah program pendidikan nonformal yang menyelenggarakan pendidikan umum yang dapat diikuti oleh semua tingkatan. 
+                    Pada tingkatan Paket B setara SMP/MTs, tujuannya secara khusus adalah mempersiapkan manusia yang dapat bekerja di lingkungan masyarakat. 
+                    Untuk memastikan kualitas lulusan pendidikan kesetaraan setara dengan pendidikan formal, serta dengan mempertimbangkan tujuan tersebut, 
+                    pengembangan kurikulum dilakukan dengan mengacu pada dan melalui kontekstualisasi kompetensi inti dan kompetensi dasar yang ditetapkan oleh pemerintah.
                 </p>
                 <p class="mb-4">
-                    Taekwondo itu sendiri adalah seni bela diri asal Korea yang juga merupakan olahraga nasional Korea. Taekwondo adalah seni bela diri populer di dunia yang dipertandingkan di Olimpiade.
+                    Pada hakikatnya, prinsip dan strategi yang diterapkan oleh PKBM Cahaya Kahuripan Bangsa dalam pengembangan kurikulum Pendidikan 
+                    Kesetaraan Paket B setara SMP/MTs adalah dengan memastikan kompetensi dasar setara atau ekuivalen dengan kompetensi dasar pendidikan 
+                    formal serta mempertimbangkan kebutuhan dan tantangan hidup bermasyarakat. Hal ini dapat menjadikan pendidikan kesetaraan sebagai pendidikan 
+                    alternatif untuk memecahkan masalah sekaligus sebagai gambaran ideal peningkatan kualitas dan pengembangan pendidikan.
                 </p>
                 <p class="mb-4">
-                    Dalam bahasa Korea, ‘Tae” artinya menendang atau menghancurkan dengan kaki, “Kwon” berarti tinju, dan “Do” berarti jalan atau seni. Popularitas Taekwondo telah menyebabkan seni bela diri ini berkembang dalam berbagai bentuk. Seperti banyak seni bela diri lainnya, Taekwondo adalah gabungan dari teknik perkelahian, bela diri, olahraga, olah tubuh, hiburan, dan filsafat.
+                    Struktur kurikulum Paket B merupakan pola susunan mata pelajaran dan beban belajar yang harus ditempuh oleh peserta didik dalam kegiatan pembelajaran, 
+                    meliputi mata pelajaran, dan bobot satuan kredit kompetensi (SKK).
                 </p>
                 <p class="mb-4">
-                    Ciri khas Taekwondo adalah menekankan tendangan yang dilakukan dari suatu sikap bergerak, dengan menggunakan daya jangkau dan kekuatan kaki yang lebih besar untuk melumpuhkan lawan dari kejauhan. Dalam suatu pertandingan, tendangan berputar, 45 derajat, depan, kapak, dan samping adalah yang paling banyak digunakan. Tidak hanya tendangan, Latihan Taekwondo juga mencakup sistem yang menyeluruh dari pukulan dan pertahanan dengan tangan.
+                    Penyusunan kurikulum pendidikan kesataraan mengacu pada komptensi inti dan kompetensi dasar kurikulum pendidikan dasar dan menengah 
+                    (Permendikbud No. 24 tahun 2016). Kompetensi inti dan kempetensi dasar tersebut dilakukan kontekstualisasi dan fungsionalsasi tanpak 
+                    mengurangi kualitas dan standar kompetensi yang ada. Di PKBM Cahaya Kahuripan Bangsa, pada mata pelajaran agama dan budi pekerti 
+                    sepenuhnya menggunakan kurikulum pendidikan dasar dan menegah yang ditetapkan oleh Menteri Pendidikan dan Kebudayaan Republik Indonesia.
                 </p>
                 <p class="mb-4">
-                    Ada dua materi umum latihan Taekwondo:
+                    Muatan belajar Paket B dinyatakan dalam satuan kredit kompetensi (SKK) yang menunjukkan bobot kompetensi yang harus dicapai oleh 
+                    peserta didik dalam mengikuti program pembelajaran, baik melalui pembelajaran tatap muka, tutorial, dan atau belajar mandiri. 
+                    SKK merupakan penghargaan terhadap pencapaian kompetensi sebagai hasil belajar peserta didik dalam menguasai suatu mata pelajaran. 
+                    SKK diperhitungkan untuk setiap mata pelajaran yang terdapat dalam struktur kurikulum. Satu SKK dihitung berdasarkan pertimbangan muatan SK dan KD tiap mata pelajaran.
                 </p>
                 <p class="mb-4">
-                    <ul>
-                        <li>
-                            Poomsae atau rangkaian jurus adalah rangkaian teknik gerakan dasar serangan dan pertahanan diri dengan mengikuti diagram tertentu. Setiap diagram rangkaian gerakan poomsae didasari oleh filosofi ketimuran yang menggambarkan semangat dan cara pandang bangsa Korea.
-                        </li>
-                        </br>
-                        <li>
-                            Kyorugi atau pertarungan adalah latihan yang mengaplikasikan teknik gerakan dasar di mana dua orang bertarung saling mempraktikkan teknik serangan dan pertahanan kaki.
-                        </li>
-                        </br>
-                    </ul> 
+                    SKK dapat digunakan untuk alih kredit kompetensi yang diperoleh dari jalur pendidikan informal, 
+                    formal, kursus, keahlian dan kegiatan mandiri. Satu SKK adalah satu satuan kompetensi yang dicapai 
+                    melalui pembelajaran 1 jam pelajaran tatap muka atau 2 jam pelajaran tutorial atau 3 jam pelajaran mandiri, 
+                    atau kombinasi secara proporsional dari ketiganya.
+                </p>
+                <!-- Baru sampe sini -->
+                <p class="mb-4">
+                    SKK merupakan penghargaan terhadap pencapaian kompetensi sebagai hasil belajar warga belajar dalam menguasai suatu mata pelajaran. 
+                    SKK diperhitungkan untuk setiap mata pelajaran yang terdapat dalam struktur kurikulum. Satu SKK dihitung berdasarkan pertimbangan muatan KI dan KD tiap mata pelajaran.
                 </p>
                 <p class="mb-4">
-                    Latihan Taekwondo di PKBM Cahaya Kahuripan Bangsa diselenggarakan pada:
-                    </br>
-                    </br>
-                    Hari: Sabtu
-                    </br>
-                    Waktu: 10.30 – 11.30
-                    </br>
-                    Tempat: Kantor PKBM Cahaya Kahuripan Bangsa
-                </p>
-                <p>
-                    Untuk mendaftar, calon pendaftar dapat langsung mendatangi kantor PKBM CKB pada jadwal latihan dan bergabung dengan peserta latihan Taekwondo lain.
-                    </br>
-                    </br>
-                    Kegiatan Taekwondo ini terbuka untuk semua orang berusia 5 tahun ke atas.
+                    SKK dapat digunakan untuk alih kredit kompetensi yang diperoleh dari jalur pendidikan informal, formal, 
+                    kursus, keahlian dan kegiatan mandiri. Satu SKK adalah satu satuan kompetensi yang dicapai melalui pembelajaran 
+                    1 jam pelajaran tatap muka atau 2 jam pelajaran tutorial atau 3 jam pelajaran mandiri, atau kombinasi secara proporsional dari ketiganya. 
+                    Di PKBM Cahaya Kahuripan Bangsa sendiri, tidak semua SKK diimplementasikan pada pembelajaran tatap muka; terdapat pengaturan proporsional 
+                    atas bobot SKK yang didistribusikan ke dalam tatap muka, tutorial, dan mandiri sehingga pembelajaran pendidikan kesetaraan dapat berlangsung 
+                    dengan kekhasan pendidikan kesetaraan dan tetap berupaya mencapai tujuan yang telah ditetapkan, yaitu agar lulusan Paket A memiliki keterampilan 
+                    untuk memenuhi kebutuhan hidup.
                 </p>
             </div>
         </section>

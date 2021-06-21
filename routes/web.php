@@ -48,6 +48,12 @@ Route::get('/karate', function () {
 Route::get('/personalia', function () {
     return view('personalia');
 });
+Route::get('/paketa', function () {
+    return view('paketa');
+});
+Route::get('/paketb', function () {
+    return view('paketb');
+});
 
 Auth::routes();
 

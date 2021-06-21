@@ -51,10 +51,10 @@
                                             <a class="dropdown-item" href="#">Kesetaraan</a>
                                             <ul class="dropdown-menu dropdown-submenu">
                                                 <li>
-                                                    <a class="dropdown-item" href="#">Paket A (Setara SD)</a>
+                                                    <a class="dropdown-item" href="/paketa">Paket A (Setara SD)</a>
                                                 </li>
                                                 <li>
-                                                    <a class="dropdown-item" href="#">Paket B (Setara SMP)</a>
+                                                    <a class="dropdown-item" href="/paketb">Paket B (Setara SMP)</a>
                                                 </li>
                                                 <li>
                                                     <a class="dropdown-item" href="#">Paket C (Setara SMA)</a>

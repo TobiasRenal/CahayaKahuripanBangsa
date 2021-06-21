@@ -39,7 +39,7 @@
                             </ul>
                             </li>
                         </ul>
-                    </div>
+                        </div>
                         <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
                         <ul class="navbar-nav">
                             <li class="nav-item dropdown">
@@ -51,7 +51,7 @@
                                     <a class="dropdown-item" href="#">Kesetaraan</a>
                                     <ul class="dropdown-menu dropdown-submenu">
                                         <li>
-                                            <a class="dropdown-item" href="/paketa">Paket A (Setara SD)</a>
+                                            <a class="dropdown-item" href="#">Paket A (Setara SD)</a>
                                         </li>
                                         <li>
                                             <a class="dropdown-item" href="/paketb">Paket B (Setara SMP)</a>
@@ -67,7 +67,7 @@
                                         </li>
                                     </ul>
                                 </li>
-                                <li><a class="dropdown-item" href="/inggris">Kursus Bahasa Inggris</a></li>
+                                <li><a class="dropdown-item" href="#page-top">Kursus Bahasa Inggris</a></li>
                                 <li><a class="dropdown-item" href="/komputer">Kursus Komputer</a></li>
                                 <li><a class="dropdown-item" href="/musik">Kursus Musik</a></li>
                                 <li><a class="dropdown-item" href="/kober">Kober Cahaya Bintang</a></li>
@@ -77,92 +77,79 @@
                             </li>
                         </ul>
                         </div>
-                        <li class="nav-item"><a class="nav-link" href="#page-top">Kontak</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/contact">Kontak</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">Administrator</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
-        <!-- Contact-->
-        <header class="masthead">
-            <section class="page-section" id="contact">
-                <div class="container px-4 px-lg-5">
-                    <div class="row gx-4 gx-lg-5 justify-content-center">
-                        <div class="col-lg-8 col-xl-6 text-center">
-                            <h2 class="mt-0 txt-light">Punya Pertanyaan?</h2>
-                            <hr class="divider" />
-                            <p class="txt-light mb-5">Tulis pertanyaan anda dan kami akan menjawab secepatnya.</p>
-                        </div>
-                    </div>
-                    <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
-                        <div class="col-lg-6">
-                            <form action="mailto:trenal68@gmail.com">
-                                <div class="form-floating mb-3">
-                                    <input class="form-control" id="inputName" type="text" placeholder="Enter your name..." />
-                                    <label for="inputName">Nama Lengkap</label>
-                                </div>
-                                <div class="form-floating mb-3">
-                                    <input class="form-control" id="inputEmail" type="email" placeholder="name@example.com" />
-                                    <label for="inputEmail">Email</label>
-                                </div>
-                                <div class="form-floating mb-3">
-                                    <input class="form-control" id="inputPhone" type="tel" placeholder="(123) 456-7890" />
-                                    <label for="inputPhone">Nomor Telepon</label>
-                                </div>
-                                <div class="form-floating mb-3">
-                                    <textarea class="form-control" id="inputMessage" type="text" placeholder="Enter your message here..." style="height: 10rem"></textarea>
-                                    <label for="inputMessage">Pertanyaan</label>
-                                </div>
-                                <div class="d-grid"><button class="btn btn-blue btn-xl" type="submit">Submit</button></div>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="row gx-4 gx-lg-5 justify-content-center">
-                        <div class="col-lg-4 text-center mb-5 mb-lg-0">
-                            <i class="bi-phone fs-2 mb-3 text-muted"></i>
-                            <div class="txt-light">(022) 4204721</div>
-                        </div>
+        <!-- Masthead-->
+        <!-- <header class="masthead">
+            
+        </header> -->
+        <!-- About-->
+        <section class="page-section bg-primary" id="about">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="text-white mt-0">Paket A (setara SD)</h2>
                     </div>
                 </div>
-            </section>
-        </header>
+            </div>
+        </section>
         <!-- Services-->
-        <section class="page-section bg-white" id="services">
-            <div class="container px-4 px-lg-5 ">
-                <h2 class="text-center mt-0">Hubungi Kami</h2>
-                <hr class="divider" />
-                <div class="row gx-4 gx-lg-5">
-                    <div class="col-lg-3 col-md-6 text-center">
-                        <div class="mt-5">
-                            <h3 class="h3 mb-2">Alamat</h3>
-                            <p class="text-muted mb-0">Jalan Maribaya No. 1 Ruko Central Lembang B-6 Lembang, Bandung Barat 40391, Jawa Barat, Indonesia</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 text-center">
-                        <div class="mt-5">
-                            <h3 class="h3 mb-2">Jam Kerja</h3>
-                            <p class="text-muted mb-0">Senin s.d. Jumat Pukul 09.00-16.00 WIB</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 text-center">
-                        <div class="mt-5">
-                            <h3 class="h3 mb-2">Narahubung</h3>
-                            <p class="text-muted mb-0">
-                                Aldi : 08112163825
-                                </br>
-                                Desi : 081322281610
-                                </br>
-                                Kiki : 081286938633
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 text-center">
-                        <div class="mt-5">
-                            <h3 class="h3 mb-2">Email</h3>
-                            <p class="text-muted mb-0">Email : admin@pkbmckb.org</p>
-                        </div>
-                    </div>
-                </div>
+        <section class="page-section" id="services">
+            <div class="container px-4 px-lg-5">
+                <p class="mb-4">
+                    Dalam rangka menyesuaikan dinamika perkembangan masyarakat, lokal, nasional, dan global guna mewujudkan fungsi dan tujuan pendidikan nasional, 
+                    untuk meningkatkan mutu dan daya saing bangsa, Pemerintah Republik Indonesia telah melakukan pengaturan kembali kurikulum dengan diterbitkannya Permendikbud
+                     No. 24 tahun 2016 tentang kompetensi inti dan kompetensi dasar pelajaran pada kurikulum 2013 pada pendidikan dasar dan pendidikan menengah.
+                </p>
+                <p class="mb-4">
+                    PKBM Cahaya Kahuripan Bangsa menyelengarakan pendidikan kesetaraan sebagai salah satu program pendidikan nonformal. 
+                    Dalam halaman ini, disajikan muatan struktur kurikulum dan jadwal pelajaran Paket A setara SD/MI yang berlaku di PKBM Cahaya Kahuripan Bangsa pada tahun ajaran 2019/2020.
+                </p>
+                <p class="mb-4">
+                    Untuk memastikan kualitas lulusan pendidikan kesetaraan adalah setara dengan pendidikan formal, 
+                    maka PKBM Cahaya Kahuripan Bangsa melakukan pengembangan kurikulum pendidikan kesetaraan dilakukan dengan mengacu dan melalui kontekstualisasi 
+                    kompetensi inti dan kompetensi dasar dari kurikulum pendidikan formal, disesuaikan dengan masalah, tantangan, kebutuhan dan karakteristik pendidikan kesetaraan.
+                </p>
+                <p class="mb-4">
+                    PKBM Cahaya Kahuripan Bangsa menerapkan prinsip dan strategi dalam pengembangan kurikulum pendidikan kesetaraan ini, 
+                    yaitu dengan memastikan kompetensi dasar pendidikan kesetaraan setara atau equivalen dengan kompetensi dasar pendidikan formal; 
+                    menjadikan rumusan atau deskripsi kompetensi lebih operasional; dan memberikan tekanan khusus rumusan kompetensi agar bisa dicapai sesuai kebutuhan yang diharapkan, 
+                    sehingga dapat menjadikan pendidikan kesetaraan mampu berperan sebagai pendidikan alternatif untuk memecahkan masalah sekaligus futuristik dalam peningkatan kualitas 
+                    dan pengembangan pendidikan.
+                </p>
+                <p class="mb-4">
+                    Struktur kurikulum Paket A merupakan pola susunan mata pelajaran dan beban belajar yang harus ditempuh oleh warga belajar dalam kegiatan pembelajaran, 
+                    meliputi mata pelajaran, dan bobot satuan kredit kompetensi (SKK).
+                </p>
+                <p class="mb-4">
+                    Penyusunan kurikulum pendidikan kesataraan mengacu pada komptensi inti dan kompetensi dasar kurikuluk pendidikan dasar dan menengah 
+                    (Permendikbud No. 24 tahun 2016). Kompetensi inti dan kempetensi dasar tersebut dilakukan kontekstualisasi dan fungsionalsasi tanpak mengurangi 
+                    kualitas dan standar kompetensi yang ada. Di PKBM Cahaya Kahuripan Bangsa, mata pelajaran agama dan budi pekerti sepenuhnya menggunakan kurikulum 
+                    pendidikan dasar dan menegah yang ditetapkan oleh Menteri Pendidikan dan Kebudayaan Republik Indonesia.
+                </p>
+                <p class="mb-4">
+                    Muatan belajar Paket A dinyatakan dalam satuan kredit kompetensi (SKK) 
+                    yang menunjukkan bobot kompetensi yang harus dicapai oleh warga belajar dalam mengikuti program pembelajaran, 
+                    baik melalui pembelajaran tatap muka, tutorial, dan atau belajar mandiri.
+                </p>
+                <p class="mb-4">
+                    SKK merupakan penghargaan terhadap pencapaian kompetensi sebagai hasil belajar warga belajar dalam menguasai suatu mata pelajaran. 
+                    SKK diperhitungkan untuk setiap mata pelajaran yang terdapat dalam struktur kurikulum. Satu SKK dihitung berdasarkan pertimbangan muatan KI dan KD tiap mata pelajaran.
+                </p>
+                <p class="mb-4">
+                    SKK dapat digunakan untuk alih kredit kompetensi yang diperoleh dari jalur pendidikan informal, formal, 
+                    kursus, keahlian dan kegiatan mandiri. Satu SKK adalah satu satuan kompetensi yang dicapai melalui pembelajaran 
+                    1 jam pelajaran tatap muka atau 2 jam pelajaran tutorial atau 3 jam pelajaran mandiri, atau kombinasi secara proporsional dari ketiganya. 
+                    Di PKBM Cahaya Kahuripan Bangsa sendiri, tidak semua SKK diimplementasikan pada pembelajaran tatap muka; terdapat pengaturan proporsional 
+                    atas bobot SKK yang didistribusikan ke dalam tatap muka, tutorial, dan mandiri sehingga pembelajaran pendidikan kesetaraan dapat berlangsung 
+                    dengan kekhasan pendidikan kesetaraan dan tetap berupaya mencapai tujuan yang telah ditetapkan, yaitu agar lulusan Paket A memiliki keterampilan 
+                    untuk memenuhi kebutuhan hidup.
+                </p>
+                <!-- baru sampe sini -->
             </div>
         </section>
         <!-- Footer-->
