@@ -122,7 +122,7 @@
                 </li>
                 <li class="nav-item ">
                     <a class="nav-link" href="/inventaris">
-                        <i class="ni ni-paper-diploma text-blue"></i> {{ __('inventaris') }}
+                        <i class="ni ni-paper-diploma text-blue"></i> {{ __('Inventaris') }}
                     </a>
                 </li>
                 <li class="nav-item ">
