@@ -133,7 +133,7 @@
                     </a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link" href="{{ route('map') }}">
+                    <a class="nav-link" href="/keuangan">
                         <i class="ni ni-money-coins text-green"></i> {{ __('Keuangan') }}
                     </a>
                 </li>
