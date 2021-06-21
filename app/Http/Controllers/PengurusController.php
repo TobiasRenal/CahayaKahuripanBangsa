@@ -13,7 +13,8 @@ class PengurusController extends Controller
      */
     public function index()
     {
-        //
+        $data = Pengurus::get();
+        return view('pages.organisasi',["pengurus"=>$data]);
     }
 
     /**
@@ -80,5 +81,12 @@ class PengurusController extends Controller
     public function destroy($id)
     {
         //
+    }
+    public function delete($id)
+    {
+        $pengurus = pengurus::find($id);
+        $pengurus->delete();
+
+        return redirect('/pages/organisasi')->with('success', 'Pengurus berhasil dihapus');
     }
 }
