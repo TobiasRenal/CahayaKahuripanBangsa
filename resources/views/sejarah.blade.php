@@ -35,7 +35,6 @@
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                                 <li><a class="dropdown-item" href="#page-top">Latar Belakang & Sejarah</a></li>
                                 <li><a class="dropdown-item" href="/personalia">Personalia</a></li>
-                                <li><a class="dropdown-item" href="#">Kurikulum</a></li>
                             </ul>
                             </li>
                         </ul>
@@ -57,13 +56,13 @@
                                             <a class="dropdown-item" href="/paketb">Paket B (Setara SMP)</a>
                                         </li>
                                         <li>
-                                            <a class="dropdown-item" href="#">Paket C (Setara SMA)</a>
+                                            <a class="dropdown-item" href="/paketc">Paket C (Setara SMA)</a>
                                         </li>
                                         <li>
-                                            <a class="dropdown-item" href="#">PKK Paket C Vokasi</a>
+                                            <a class="dropdown-item" href="/pkk">PKK Paket C Vokasi</a>
                                         </li>
                                         <li>
-                                            <a class="dropdown-item" href="#">SBMPTN</a>
+                                            <a class="dropdown-item" href="https://ltmpt.ac.id/">SBMPTN</a>
                                         </li>
                                     </ul>
                                 </li>

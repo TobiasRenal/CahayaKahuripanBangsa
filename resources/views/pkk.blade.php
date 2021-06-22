@@ -59,18 +59,18 @@
                                             <a class="dropdown-item" href="/paketc">Paket C (Setara SMA)</a>
                                         </li>
                                         <li>
-                                            <a class="dropdown-item" href="/pkk">PKK Paket C Vokasi</a>
+                                            <a class="dropdown-item" href="#">PKK Paket C Vokasi</a>
                                         </li>
                                         <li>
                                             <a class="dropdown-item" href="https://ltmpt.ac.id/">SBMPTN</a>
                                         </li>
                                     </ul>
                                 </li>
-                                <li><a class="dropdown-item" href="/inggris">Kursus Bahasa Inggris</a></li>
+                                <li><a class="dropdown-item" href="#page-top">Kursus Bahasa Inggris</a></li>
                                 <li><a class="dropdown-item" href="/komputer">Kursus Komputer</a></li>
                                 <li><a class="dropdown-item" href="/musik">Kursus Musik</a></li>
                                 <li><a class="dropdown-item" href="/kober">Kober Cahaya Bintang</a></li>
-                                <li><a class="dropdown-item" href="#page-top">Taekwondo</a></li>
+                                <li><a class="dropdown-item" href="/taekwondo">Taekwondo</a></li>
                                 <li><a class="dropdown-item" href="/karate">Karate INKAI</a></li>
                             </ul>
                             </li>
@@ -91,7 +91,7 @@
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-lg-8 text-center">
-                        <h2 class="text-white mt-0">Taekwondo</h2>
+                        <h2 class="text-white mt-0">PKK untuk Paket C Vokasi</h2>
                     </div>
                 </div>
             </div>
@@ -100,50 +100,37 @@
         <section class="page-section" id="services">
             <div class="container px-4 px-lg-5">
                 <p class="mb-4">
-                    Sebagai sarana warga belajar PKBM CKB dan masyarakat umum untuk mengembangkan diri, mengekspresikan diri, berprestasi, berolahraga, berkomunitas sosial, dan pendidikan karakter, PKBM Cahaya Kahuripan Bangsa menyelenggarakan kegiatan Taekwondo.
+                    PKBM Cahaya Kahuripan Bangsa bekerjasama dengan Direktorat Pembinaan Kursus dan Pelatihan Direktorat Jenderal 
+                    PAUD dan Pendidikan Masyarakat Kementerian Pendidikan dan Kebudayaan Republik Indonesia menyelenggarakan Pendidikan 
+                    Kecakapan Kerja (PKK) untuk Paket C Vokasi (disingkat PKK-C). PKK-C adalah program layanan pendidikan dan pelatihan 
+                    yang beriorientasi pada pengembangan keterampilan kerja yang diberikan kepada warga belajar Pendidikan Kesetaraan Paket C.
                 </p>
                 <p class="mb-4">
-                    Kegiatan Taekwondo termasuk ke dalam rumpun kegiatan pengembangan diri (jika di sekolah formal sering disebut ekstrakurikuler) di luar kursus, PAUD, dan kesetaraan, dan dapat diikuti oleh masyarakat umum maupun warga belajar PKBM CKB.
-                </p>
-                <p class="mb-4">
-                    Taekwondo itu sendiri adalah seni bela diri asal Korea yang juga merupakan olahraga nasional Korea. Taekwondo adalah seni bela diri populer di dunia yang dipertandingkan di Olimpiade.
-                </p>
-                <p class="mb-4">
-                    Dalam bahasa Korea, ‘Tae” artinya menendang atau menghancurkan dengan kaki, “Kwon” berarti tinju, dan “Do” berarti jalan atau seni. Popularitas Taekwondo telah menyebabkan seni bela diri ini berkembang dalam berbagai bentuk. Seperti banyak seni bela diri lainnya, Taekwondo adalah gabungan dari teknik perkelahian, bela diri, olahraga, olah tubuh, hiburan, dan filsafat.
-                </p>
-                <p class="mb-4">
-                    Ciri khas Taekwondo adalah menekankan tendangan yang dilakukan dari suatu sikap bergerak, dengan menggunakan daya jangkau dan kekuatan kaki yang lebih besar untuk melumpuhkan lawan dari kejauhan. Dalam suatu pertandingan, tendangan berputar, 45 derajat, depan, kapak, dan samping adalah yang paling banyak digunakan. Tidak hanya tendangan, Latihan Taekwondo juga mencakup sistem yang menyeluruh dari pukulan dan pertahanan dengan tangan.
-                </p>
-                <p class="mb-4">
-                    Ada dua materi umum latihan Taekwondo:
-                </p>
-                <p class="mb-4">
-                    <ul>
+                    Tujuan diadakannya PKK-C adalah untuk:
+                    <ol>
                         <li>
-                            Poomsae atau rangkaian jurus adalah rangkaian teknik gerakan dasar serangan dan pertahanan diri dengan mengikuti diagram tertentu. Setiap diagram rangkaian gerakan poomsae didasari oleh filosofi ketimuran yang menggambarkan semangat dan cara pandang bangsa Korea.
+                            memberikan pelatihan bagi warga belajar Pendidikan Kesetaraan PAket C agar memiliki keterampilan sebagai bekal untuk meniti karier di dunia kerja,
                         </li>
-                        </br>
                         <li>
-                            Kyorugi atau pertarungan adalah latihan yang mengaplikasikan teknik gerakan dasar di mana dua orang bertarung saling mempraktikkan teknik serangan dan pertahanan kaki.
+                            memberikan peluang bagi warga belajar Pendidikan Kesetaraan Paket C untuk memiliki sertifikat kompetensi.
                         </li>
-                        </br>
-                    </ul> 
+                    </ol>
                 </p>
                 <p class="mb-4">
-                    Latihan Taekwondo di PKBM Cahaya Kahuripan Bangsa diselenggarakan pada:
-                    </br>
-                    </br>
-                    Hari: Sabtu
-                    </br>
-                    Waktu: 10.30 – 11.30
-                    </br>
-                    Tempat: Kantor PKBM Cahaya Kahuripan Bangsa
+                    Kegiatan ini diikuti oleh seluruh warga belajar Paket C PKBM Cahaya Kahuripan Bangsa di tingkat II 
+                    (setara kelas XII) berusia 15-35 tahun yang sudah terdaftar di DAPODIK sebagai warga belajar PKBM Cahaya Kahuripan Bangsa.
                 </p>
-                <p>
-                    Untuk mendaftar, calon pendaftar dapat langsung mendatangi kantor PKBM CKB pada jadwal latihan dan bergabung dengan peserta latihan Taekwondo lain.
-                    </br>
-                    </br>
-                    Kegiatan Taekwondo ini terbuka untuk semua orang berusia 5 tahun ke atas.
+                <p class="mb-4">
+                    Kegiatan PKK-C yang sedang berjalan pada tahun ajaran 2019-2020 adalah sebagai berikut:
+                    <ol>
+                        <li>
+                            PKK-C Komputer Administrasi Perkantoran yang mulai diselenggarakan pada bulan Januari 2020 dan diperkirakan selesai Maret 2020.
+                        </li>
+                    </ol>
+                </p>
+                <p class="mb-4">
+                    PKBM Cahaya Kahuripan Bangsa akan terus mengupayakan untuk menyelenggarakan berbagai program PKK-C lainnya sesuai dengan kebutuhan masyarakat 
+                    Lembang dan sekitarnya, khususnya terkait berkembangnya sektor pariwisata yang menjadi unggulan Kecamatan Lembang dan Kabupaten Bandung Barat.
                 </p>
             </div>
         </section>

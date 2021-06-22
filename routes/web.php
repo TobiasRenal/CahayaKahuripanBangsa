@@ -54,6 +54,12 @@ Route::get('/paketa', function () {
 Route::get('/paketb', function () {
     return view('paketb');
 });
+Route::get('/paketc', function () {
+    return view('paketc');
+});
+Route::get('/pkk', function () {
+    return view('pkk');
+});
 
 Auth::routes();
 
