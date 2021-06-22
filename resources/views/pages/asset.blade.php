@@ -21,7 +21,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
   <meta name="author" content="Creative Tim">
-  <title>Argon Dashboard - Free Dashboard for Bootstrap 4</title>
+  <title>Asset | Yayasan CKB</title>
   <!-- Favicon -->
   <link rel="icon" href="../assets/img/brand/favicon.png" type="image/png">
   <!-- Fonts -->
@@ -40,7 +40,7 @@
     <div class="scrollbar-inner">
       <!-- Brand -->
       <div class="sidenav-header  align-items-center">
-        <a class="navbar-brand" href="javascript:void(0)">
+        <a class="navbar-brand" href="{{ route('home') }}">
           <img src="../assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
         </a>
       </div>
@@ -56,7 +56,7 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="/organisasi">
                     <i class="ni ni-badge text-blue"></i> Organisasi
                 </a>
             </li>
@@ -333,8 +333,75 @@
               <h1 class="h1 text-white d-inline-block mb-0">Asset</h1>
             </div>
             <div class="col-lg-6 col-5 text-right">
-              <a href="#" class="btn btn-sm btn-neutral">New</a>
-              <a href="#" class="btn btn-sm btn-neutral">Filters</a>
+              <!-- Add DATA -->
+            <div class="row">
+              <div class="col-md-4">
+                  <button type="button" class="btn btn-block btn-default" data-toggle="modal" data-target="#modal-form">Tambah Data</button>
+                  <div class="modal fade" id="modal-form" tabindex="-1" role="dialog" aria-labelledby="modal-form" aria-hidden="true">
+                    <div class="modal-dialog modal- modal-dialog-centered modal-sm" role="document">
+                      <div class="modal-content"> 
+                        <div class="modal-body p-0">
+                          <div class="card bg-secondary border-0 mb-0">
+                            <div class="card-header bg-transparent pb-5">
+                              <h2 class="text-center">Tambah Data Asset</h2>
+                            </div>
+                            <div class="card-body px-lg-5 py-lg-5">
+                              <form role="form">
+                              <div class="form-group mb-3">
+                                <div class="input-group input-group-merge input-group-alternative">
+                                  <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="ni ni-single-02"></i></span>
+                                  </div>
+                                  <input class="form-control" placeholder="Nama Asset" type="text">
+                                </div>
+                              </div>
+                              <h4>Tanggal perolehan</h4>
+                              <!-- PERBAIKIN ALIGNMENTNYA -->
+                              <div class="form-group">
+                                <div class="input-group">
+                                  <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
+                                  </div>
+                                  <input class="form-control datepicker" placeholder="Select date" type="text" value="06/22/2021">
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                <div class="input-group input-group-merge input-group-alternative">
+                                  <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="ni ni-money-coins"></i></span>
+                                  </div>
+                                  <input class="form-control" placeholder="Nilai Perolehan" type="text">
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                <div class="input-group input-group-merge input-group-alternative">
+                                  <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="ni ni-paper-diploma"></i></span>
+                                  </div>
+                                  <input class="form-control" placeholder="Asal asset" type="text">
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                <div class="input-group input-group-merge input-group-alternative">
+                                  <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="ni ni-single-copy-04"></i></span>
+                                  </div>
+                                  <input class="form-control" placeholder="Keterangan" type="text">
+                                </div>
+                              </div>
+                              <div class="text-center">
+                                <button type="button" class="btn btn-primary my-4">Tambah Data</button>
+                              </div>
+                            </form>
+                          </div>
+                        </div>         
+                      </div>    
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- END OF THE ADD DATA-->
             </div>
           </div>
         </div>
@@ -388,13 +455,34 @@
                 <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
                   <a class="dropdown-item" href="#">Action</a>
                   <a class="dropdown-item" href="#">Update</a>
-                  <a class="dropdown-item" href="#">Hapus</a>
+                  <a class="dropdown-item" data-toggle="modal" data-target="#response" href="#">Hapus</a>
                 </div>
               </div>
             </td>
           </tr>
         </tbody>
       </table>
+      <div class="modal fade" id="response">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title"id="exampleModalLongTitle">Hapus Data</h5>
+              <button class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+              <div class="list-group">
+                <div class="d-flex w-100 justify-content-between">
+                  <h3>Apa anda yakin akan menghapus?</h3>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn btn-danger">Hapus</button>
+                <button class="btn btn-primary" data-dismiss="modal">Batal</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -407,9 +495,9 @@
   <script src="../assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js"></script>
   <!-- Optional JS -->
   <script src="../assets/vendor/clipboard/dist/clipboard.min.js"></script>
+  <script src="/assets/vendor/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
   <!-- Argon JS -->
   <script src="../assets/js/argon.js?v=1.2.0"></script>
-  
 </body>
 
 </html>

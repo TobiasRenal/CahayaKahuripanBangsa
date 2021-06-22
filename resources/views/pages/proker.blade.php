@@ -21,7 +21,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
   <meta name="author" content="Creative Tim">
-  <title>Admin | Yayasan CKB</title>
+  <title>Program Kerja | Yayasan CKB</title>
   <!-- Favicon -->
   <link rel="icon" href="../assets/img/brand/favicon.png" type="image/png">
   <!-- Fonts -->
@@ -40,7 +40,7 @@
     <div class="scrollbar-inner">
       <!-- Brand -->
       <div class="sidenav-header  align-items-center">
-        <a class="navbar-brand" href="javascript:void(0)">
+        <a class="navbar-brand" href="{{ route('home') }}">
           <img src="../assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
         </a>
       </div>
@@ -460,13 +460,34 @@
                 <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
                   <a class="dropdown-item" href="#">Detail</a>
                   <a class="dropdown-item" href="#">Update</a>
-                  <a class="dropdown-item" href="#">Hapus</a>
+                  <a class="dropdown-item" data-toggle="modal" data-target="#response" href="#">Hapus</a>
                 </div>
               </div>
             </td>
           </tr>
         </tbody>
       </table>
+      <div class="modal fade" id="response">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title"id="exampleModalLongTitle">Hapus Data</h5>
+              <button class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+              <div class="list-group">
+                <div class="d-flex w-100 justify-content-between">
+                  <h3>Apa anda yakin akan menghapus?</h3>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn btn-danger">Hapus</button>
+                <button class="btn btn-primary" data-dismiss="modal">Batal</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
