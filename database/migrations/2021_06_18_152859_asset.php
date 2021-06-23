@@ -14,11 +14,11 @@ class Asset extends Migration
     public function up()
     {
         Schema::create('asset', function (Blueprint $table) {
-            $table->id('id_asset');
+            $table->id('id_asset')->autoIncrement();
             $table->integer('role_id')->nullable();
             $table->foreign('role_id')->references('role_id')->on('role_pengurus');
             $table->String('nama_asset');
-            $table->dateTime('tanggal_perolehan',$precision = 0);
+            $table->date('tanggal_perolehan');
             $table->bigInteger('nilai_perolehan');
             $table->String('asal_asset');
             $table->String('keterangan');

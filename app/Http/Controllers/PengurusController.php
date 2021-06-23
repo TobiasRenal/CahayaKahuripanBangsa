@@ -47,14 +47,14 @@ class PengurusController extends Controller
         $pengurus = new Pengurus();
         $pengurus->role_id = $request->role_idWeb;
         $pengurus->nama_pengurus = $request->nama_pengurusWeb;
-        $pengurus->tempat_lahir = $request->nama_pengurusWeb;
+        $pengurus->tempat_lahir = $request->tempat_lahirWeb;
         $pengurus->tanggal_lahir = $request->tanggal_lahirWeb;
         $pengurus->alamat = $request->alamatWeb;
         $pengurus->no_telepon = $request->no_teleponWeb;
         $pengurus->save();
 
         $pgrs = Pengurus::all();
-        return redirect('pages.organisasi')->with('success','data berhasil disimpan');
+        return redirect('/datapengurus')->with('success','data berhasil disimpan');
     }
 
     /**
@@ -99,7 +99,7 @@ class PengurusController extends Controller
         ]);
 
         Pengurus::create($request->all());
-        return redirect()->route('pages.organisasi')->with('success');
+        return redirect()->route('/datapengurus')->with('success');
     }
 
     /**
@@ -111,7 +111,7 @@ class PengurusController extends Controller
     public function destroy(pengurus $pengurus)
     {
         $pengurus >delete();
-        return redirect()->route('pages.organisasi')->with('success','Pengurus berhasil dihapus');
+        return redirect()->route('/datapengurus')->with('success','Pengurus berhasil dihapus');
     }
     // public function delete($id)
     // {

@@ -55,7 +55,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/organisasi">
+                <a class="nav-link" href="/datapengurus">
                     <i class="ni ni-badge text-blue"></i> Organisasi
                 </a>
             </li>
