@@ -22,7 +22,7 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
             <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="#page-top">PKBM CKB</a>
+                <a class="navbar-brand" href="#page-top">Yayasan CKB</a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto my-2 my-lg-0">
@@ -76,6 +76,33 @@
                                 </li>
                             </ul>
                         </div>
+                        <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                            <ul class="navbar-nav">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Organisasi
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <li>
+                                            <a class="dropdown-item" href="#">Divisi Pendidikan</a>
+                                            <ul class="dropdown-menu dropdown-submenu">
+                                                <li>
+                                                    <a class="dropdown-item" href="https://pkbmckb.org/">PKBM CKB Lembang</a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item" href="/tkceria">TK Ceria Bamek Kalbar</a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item" href="/narwastu">SD & SMP Narwastu Sumba NTT</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li><a class="dropdown-item" href="/kesehatan">Divisi Kesehatan</a></li>
+                                        <li><a class="dropdown-item" href="/pemberdayaan">Divisi Pemberdayaan Masyarakat</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
                         <li class="nav-item"><a class="nav-link" href="/contact">Kontak</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">Administrator</a></li>
                     </ul>
@@ -87,7 +114,7 @@
             <div class="container px-4 px-lg-5 h-100">
                 <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
                     <div class="col-lg-8 align-self-end">
-                        <h1 class="text-white font-weight-bold">Selamat datang di web resmi PKBM Cahaya Kahuripan Bangsa</h1>
+                        <h1 class="text-white font-weight-bold">Selamat datang di web resmi Yayasan Cahaya Kahuripan Bangsa</h1>
                         <hr class="divider divider-light" />
                     </div>
                     <div class="col-lg-8 align-self-baseline">

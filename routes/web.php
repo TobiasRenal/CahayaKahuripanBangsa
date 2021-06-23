@@ -60,6 +60,18 @@ Route::get('/paketc', function () {
 Route::get('/pkk', function () {
     return view('pkk');
 });
+Route::get('/tkceria', function () {
+    return view('tkceria');
+});
+Route::get('/kesehatan', function () {
+    return view('kesehatan');
+});
+Route::get('/narwastu', function () {
+    return view('narwastu');
+});
+Route::get('/pemberdayaan', function () {
+    return view('pemberdayaan');
+});
 
 Auth::routes();
 

@@ -18,8 +18,6 @@
                         <div class="text-center text-muted mb-4">
                             <small>
                                     Silahkan memasukkan email dan password anda
-                                    <br>
-                                    Username <strong>admin@argon.com</strong> Password: <strong>secret</strong>
                             </small>
                         </div>
                         <form role="form" method="POST" action="{{ route('login') }}">
