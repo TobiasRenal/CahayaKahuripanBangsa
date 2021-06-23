@@ -13,8 +13,8 @@ class PengurusController extends Controller
      */
     public function index()
     {
-        $data = Pengurus::get();
-        return view('pages.organisasi',["pengurus"=>$data]);
+        $pengurus = Pengurus::get();
+        return view('pages.organisasi',["pengurus"=>$pengurus]);
     }
 
     /**
@@ -22,7 +22,7 @@ class PengurusController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(array $pengurus)
     {
         //
     }
@@ -35,7 +35,14 @@ class PengurusController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $pengurus = new Pengurus;
+        $pengurus->role_id = $request->role_id;
+        $pengurus->nama_pengurus = $request->nama_pengurus;
+        $pengurus->tempat_lahir=$request->tempat_lahir;
+        $pengurus->tanggal_lahir=$request->tanggal_lahir;
+        $pengurus->alamat=$request->alamat;
+        $pengurus->no_telepon=$request->no_telepon;
+        $pengurus->save();
     }
 
     /**

@@ -418,7 +418,6 @@
             <th scope="col">Nilai perolehan</th>
             <th scope="col">Asal Asset</th>
             <th scope="col">Keterangan</th>
-            <th scope="col">Role</th>
             <th scope="col"></th>
           </tr>
         </thead>
@@ -443,9 +442,6 @@
             </td>
             <td>
              Mulus no minus
-            </td>
-            <td>
-             Admin
             </td>
             <td class="text-right">
               <div class="dropdown">

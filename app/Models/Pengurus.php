@@ -11,11 +11,11 @@ class Pengurus extends Model
     protected $table = "pengurus";
     protected $primaryKey = 'id_pengurus';
     protected $fillable=[
+        "role_id",
         "nama_pengurus",
         "tempat_lahir",
         "tanggal_lahir",
         "alamat",
         "no_telepon",
-        "role_id"
     ];
 }

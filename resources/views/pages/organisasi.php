@@ -410,11 +410,12 @@
         <thead class="thead-light">
           <tr>
             <th scope="col">ID</th>
-            <th scope="col">Nama</th>
-            <th scope="col">Alamat</th>
-            <th scope="col">Tempat/Tanggal Lahir</th>
-            <th scope="col">Nomor Telepon</th>
             <th scope="col">Role</th>
+            <th scope="col">Nama</th>
+            <th scope="col">Tempat</th>
+            <th scope="col">Tanggal Lahir</th>
+            <th scope="col">Alamat</th>
+            <th scope="col">Nomor Telepon</th>
             <th scope="col"></th>
           </tr>
         </thead>
@@ -424,21 +425,24 @@
             <th scope="row">
               <div class="media align-items-center">
                 <div class="media-body">
-                  <span class="mb-0 text-sm">Tobias Renal Arianto</span>
+                  <span class="mb-0 text-sm">Admin</span>
                 </div>
               </div>
             </th>
             <td>
+              Tobias Renal Arianto
+            </td>
+            <td>
+              Jakarta
+            </td>
+            <td>
+              27 September 2000
+            </td>
+            <td>
               Komplek ABCD Nomor 1
             </td>
             <td>
-              Bandung, 27 September 2000
-            </td>
-            <td>
               081234567890
-            </td>
-            <td>
-              Admin
             </td>
             <td class="text-right">
               <div class="dropdown">

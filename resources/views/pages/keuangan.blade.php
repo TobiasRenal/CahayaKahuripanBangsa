@@ -405,7 +405,6 @@
             <th scope="col">Tanggal Laporan Keuangan</th>
             <th scope="col">Jumlah</th>
             <th scope="col">Keterangan</th>
-            <th scope="col">Role</th>
             <th scope="col"></th>
           </tr>
         </thead>
@@ -427,9 +426,6 @@
             </td>
             <td>
                 Jangan digunakan
-            </td>
-            <td>
-             Admin
             </td>
             <td class="text-right">
               <div class="dropdown">
