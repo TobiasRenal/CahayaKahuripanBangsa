@@ -56,11 +56,11 @@
                             </div>
                             <div class="form-group{{ $errors->has('role_id') ? ' has-danger' : '' }}">
                                 <select class="form-control" name="role_id" aria-labelledby="role">
-                                    <option value="1" href="#">Admin</a>
-                                    <option value="2" href="#">Pembina</a>
-                                    <option value="3" href="#">Pengurus</a>
-                                    <option value="4" href="#">Keuangan</a>
-                                    <option value="5" href="#">Perlengkapan</a>
+                                    <option value="1">Admin</option>
+                                    <option value="2">Pembina</option>
+                                    <option value="3">Pengurus</option>
+                                    <option value="4">Keuangan</option>
+                                    <option value="5">Perlengkapan</option>
                                 </select>
                             </div>
                             <div class="form-group{{ $errors->has('password') ? ' has-danger' : '' }}">

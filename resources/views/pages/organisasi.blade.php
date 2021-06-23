@@ -467,30 +467,34 @@
               </div>
             </td>
           </tr>
+          <div class="modal fade" id="response">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title"id="exampleModalLongTitle">Hapus Data</h5>
+                          <button class="close" data-dismiss="modal">&times;</button>
+                      </div>
+                      <div class="modal-body">
+                          <div class="list-group">
+                              <div class="d-flex w-100 justify-content-between">
+                                  <h3>Apa anda yakin akan menghapus?</h3>
+                              </div>
+                          </div>
+                          <div class="modal-footer">
+                              <form action="{{ url('/datapengurus/delete/'.$peng->id_pengurus) }}" method="POST">
+                              @method('delete')
+                              @csrf
+                              <button class="btn btn btn-danger" type="submit">Hapus</button>
+                              <button class="btn btn-primary" data-dismiss="modal">Batal</button>
+                              </form>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
           @endforeach
         </tbody>
       </table>
-      <div class="modal fade" id="response">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title"id="exampleModalLongTitle">Hapus Data</h5>
-              <button class="close" data-dismiss="modal">&times;</button>
-            </div>
-            <div class="modal-body">
-              <div class="list-group">
-                <div class="d-flex w-100 justify-content-between">
-                  <h3>Apa anda yakin akan menghapus?</h3>
-                </div>
-              </div>
-              <div class="modal-footer">
-                <button class="btn btn btn-danger">Hapus</button>
-                <button class="btn btn-primary" data-dismiss="modal">Batal</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
   <!-- Argon Scripts -->

@@ -108,16 +108,16 @@ class PengurusController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\RedirectResponse|\Illuminate\Http\Response
      */
-    public function destroy(pengurus $pengurus)
+    public function destroy(Pengurus $pengurus)
     {
         $pengurus >delete();
         return redirect()->route('/datapengurus')->with('success','Pengurus berhasil dihapus');
     }
-    // public function delete($id)
-    // {
-    //     $pengurus = pengurus::find($id);
-    //     $pengurus->delete();
+     public function delete($id)
+     {
+         $pengurus = Pengurus::find($id);
+         $pengurus->delete();
 
-    //     return redirect('/pages/organisasi')->with('success', 'Pengurus berhasil dihapus');
-    // }
+         return redirect('/datapengurus')->with('success', 'Pengurus berhasil dihapus');
+     }
 }

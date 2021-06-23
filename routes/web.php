@@ -83,6 +83,7 @@ Route::get('/home', 'App\Http\Controllers\HomeController@index')->name('home');
 
 Route::get('/datapengurus', [PengurusController::class, 'index']);
 Route::post('/datapengurus/store', [PengurusController::class, 'store']);
+Route::delete('/datapengurus/delete/{id}', [PengurusController::class, 'delete']);
 
 Route::group(['middleware' => 'auth'], function () {
 	Route::resource('user', 'App\Http\Controllers\UserController', ['except' => ['show']]);
