@@ -60,7 +60,7 @@
                 </a>
             </li>
             <li class="nav-item ">
-                <a class="nav-link" href="/proker">
+                <a class="nav-link" href="/dataproker">
                     <i class="ni ni-briefcase-24 text-orange"></i>Program Kerja
                 </a>
             </li>
@@ -298,9 +298,9 @@
                   <i class="ni ni-single-02"></i>
                   <span>My profile</span>
                 </a>
-                <a href="#!" class="dropdown-item">
+                <a href="/datarole" class="dropdown-item">
                   <i class="ni ni-settings-gear-65"></i>
-                  <span>Settings</span>
+                  <span>Role Edit</span>
                 </a>
                 <a href="#!" class="dropdown-item">
                   <i class="ni ni-calendar-grid-58"></i>

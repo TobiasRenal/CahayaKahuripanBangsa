@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\PengurusController;
+use App\Http\Controllers\ProgramKerjaController;
+use App\Http\Controllers\RolePengurusController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -85,6 +87,14 @@ Route::get('/datapengurus', [PengurusController::class, 'index']);
 Route::post('/datapengurus/store', [PengurusController::class, 'store']);
 Route::delete('/datapengurus/delete/{id}', [PengurusController::class, 'delete']);
 
+Route::get('/dataproker', [ProgramKerjaController::class, 'index']);
+Route::post('/dataproker/store', [ProgramKerjaController::class, 'store']);
+Route::delete('/dataproker/delete/{id}', [ProgramKerjaController::class, 'delete']);
+
+Route::get('/datarole', [RolePengurusController::class, 'index']);
+Route::post('/datarole/store', [RolePengurusController::class, 'store']);
+Route::delete('/datarole/delete/{id}', [RolePengurusController::class, 'delete']);
+
 Route::group(['middleware' => 'auth'], function () {
 	Route::resource('user', 'App\Http\Controllers\UserController', ['except' => ['show']]);
 	Route::get('profile', ['as' => 'profile.edit', 'uses' => 'App\Http\Controllers\ProfileController@edit']);
@@ -93,7 +103,7 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::get('map', function () {return view('pages.maps');})->name('map');
 	Route::get('icons', function () {return view('pages.icons');})->name('icons');
 //    Route::get('organisasi', function () {return view('pages.organisasi');})->name('organisasi');
-    Route::get('proker', function () {return view('pages.proker');})->name('proker');
+    // Route::get('proker', function () {return view('pages.proker');})->name('proker');
     Route::get('asset', function () {return view('pages.asset');})->name('asset');
     Route::get('inventaris', function () {return view('pages.inventaris');})->name('inventaris');
     Route::get('keuangan',function() {return view('pages.keuangan');})->name('keuangan');

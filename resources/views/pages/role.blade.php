@@ -55,7 +55,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="/datapengurus">
                     <i class="ni ni-badge text-blue"></i> Organisasi
                 </a>
             </li>
@@ -298,7 +298,7 @@
                   <i class="ni ni-single-02"></i>
                   <span>My profile</span>
                 </a>
-                <a href="/datarole" class="dropdown-item">
+                <a href="#!" class="dropdown-item">
                   <i class="ni ni-settings-gear-65"></i>
                   <span>Role Edit</span>
                 </a>
@@ -341,17 +341,17 @@
                         <div class="modal-body p-0">
                           <div class="card bg-secondary border-0 mb-0">
                             <div class="card-header bg-transparent pb-5">
-                              <h2 class="text-center">Tambah Data Pengurus</h2>
+                              <h2 class="text-center">Tambah Data Role</h2>
                             </div>
                             <div class="card-body px-lg-5 py-lg-5">
-                            <form action="{{ url('/datapengurus/store') }}" method="POST">
+                            <form action="{{ url('/datarole/store') }}" method="POST">
                                 @csrf
                               <div class="form-group mb-3">
                                 <div class="input-group input-group-merge input-group-alternative">
                                   <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="ni ni-single-02"></i></span>
                                   </div>
-                                  <input class="form-control" placeholder="Nama" type="text" name ="nama_pengurusWeb">
+                                  <input class="form-control" placeholder="Role ID" type="text" name ="RoleIDWeb">
                                 </div>
                               </div>
                               <div class="form-group">
@@ -359,42 +359,8 @@
                                   <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="ni ni-building"></i></span>
                                   </div>
-                                  <input class="form-control" placeholder="Alamat" type="text" name ="alamatWeb">
+                                  <input class="form-control" placeholder="Role Name" type="text" name ="RoleNameWeb">
                                 </div>
-                              </div>
-                              <div class="form-group">
-                                <label for="example-search-input" class="form-control-label">Tanggal Lahir</label>
-                                <div class="input-group">
-                                  <div class="input-group-prepend">
-                                    <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
-                                  </div>
-                                  <input class="form-control datepicker" placeholder="Tanggal Lahir" type="text" name ="tanggal_lahirWeb">
-                                </div>
-                              </div>
-                              <div class="form-group">
-                                <div class="input-group input-group-merge input-group-alternative">
-                                  <div class="input-group-prepend">
-                                    <span class="input-group-text"><i class="ni ni-square-pin"></i></span>
-                                  </div>
-                                  <input class="form-control" placeholder="Tempat Lahir" type="text" name ="tempat_lahirWeb">
-                                </div>
-                              </div>
-                              <div class="form-group">
-                                <div class="input-group input-group-merge input-group-alternative">
-                                  <div class="input-group-prepend">
-                                    <span class="input-group-text"><i class="ni ni-mobile-button"></i></span>
-                                  </div>
-                                  <input class="form-control" placeholder="Nomor Telepon" type="text" name ="no_teleponWeb">
-                                </div>
-                              </div>
-                              <div>
-                                <select class="form-control" name="role_idWeb" aria-labelledby="role">
-                                  <option value="1">Admin</option>
-                                  <option value="2">Pembina</option>
-                                  <option value="3">Pengurus</option>
-                                  <option value="4">Keuangan</option>
-                                  <option value="5">Perlengkapan</option>
-                                </select>
                               </div>
                               <div class="text-center">
                                 <button type="submit" class="btn btn-primary my-4">Tambah Data</button>
@@ -419,42 +385,23 @@
       <table class="table align-items-center">
         <thead class="thead-light">
           <tr>
-            <th scope="col">ID</th>
-            <th scope="col">Role</th>
-            <th scope="col">Nama</th>
-            <th scope="col">Tempat</th>
-            <th scope="col">Tanggal Lahir</th>
-            <th scope="col">Alamat</th>
-            <th scope="col">Nomor Telepon</th>
+            <th scope="col">Nomor</th>
+            <th scope="col">Role ID</th>
+            <th scope="col">Nama Role</th>
             <th scope="col"></th>
           </tr>
         </thead>
         <tbody>
-          @foreach($pengurus as $peng)
+          @foreach($role as $rl)
           <tr>
-            <th>{{$peng->id_pengurus}}</th>
+            <th>{{$rl->role_id}}</th>
             <th scope="row">
               <div class="media align-items-center">
                 <div class="media-body">
-                  <span class="mb-0 text-sm">{{$peng->role_id}}</span>
+                  <span class="mb-0 text-sm">{{$rl->role_name}}</span>
                 </div>
               </div>
             </th>
-            <td>
-              {{$peng->nama_pengurus}}
-            </td>
-            <td>
-              {{$peng->tempat_lahir}}
-            </td>
-            <td>
-              {{$peng->tanggal_lahir}}
-            </td>
-            <td>
-              {{$peng->alamat}}
-            </td>
-            <td>
-              {{$peng->no_telepon}}
-            </td>
             <td class="text-right">
               <div class="dropdown">
                 <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -481,7 +428,7 @@
                               </div>
                           </div>
                           <div class="modal-footer">
-                              <form action="{{ url('/datapengurus/delete/'.$peng->id_pengurus) }}" method="POST">
+                              <form action="{{ url('/datarole/delete/'.$rl->role_id) }}" method="POST">
                               @method('delete')
                               @csrf
                               <button class="btn btn btn-danger" type="submit">Hapus</button>

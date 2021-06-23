@@ -299,9 +299,9 @@
                   <i class="ni ni-single-02"></i>
                   <span>My profile</span>
                 </a>
-                <a href="#!" class="dropdown-item">
+                <a href="/datarole" class="dropdown-item">
                   <i class="ni ni-settings-gear-65"></i>
-                  <span>Settings</span>
+                  <span>Role Edit</span>
                 </a>
                 <a href="#!" class="dropdown-item">
                   <i class="ni ni-calendar-grid-58"></i>
@@ -338,20 +338,21 @@
                   <button type="button" class="btn btn-block btn-default" data-toggle="modal" data-target="#modal-form">Tambah Data</button>
                   <div class="modal fade" id="modal-form" tabindex="-1" role="dialog" aria-labelledby="modal-form" aria-hidden="true">
                     <div class="modal-dialog modal- modal-dialog-centered modal-sm" role="document">
-                      <div class="modal-content"> 
+                      <div class="modal-content">
                         <div class="modal-body p-0">
                           <div class="card bg-secondary border-0 mb-0">
                             <div class="card-header bg-transparent pb-5">
                               <h2 class="text-center">Tambah Program Kerja</h2>
                             </div>
                             <div class="card-body px-lg-5 py-lg-5">
-                              <form role="form">
+                              <form role="form" action="{{ url('/dataproker/store') }}" method="POST">
+                              @csrf
                               <div class="form-group mb-3">
                                 <div class="input-group input-group-merge input-group-alternative">
                                   <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="ni ni-briefcase-24"></i></span>
                                   </div>
-                                  <input class="form-control" placeholder="Nama Program" type="text">
+                                  <input class="form-control" placeholder="Nama Program" type="text" name="NamaProgramWebs">
                                 </div>
                               </div>
                               <div class="form-group">
@@ -359,42 +360,41 @@
                                   <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="ni ni-money-coins"></i></span>
                                   </div>
-                                  <input class="form-control" placeholder="Budget" type="text">
+                                  <input class="form-control" placeholder="Budget" type="text" name="BudgetWeb">
                                 </div>
                               </div>
                               <div class="form-group">
                                 <div class="input-group input-group-merge input-group-alternative">
                                   <div class="input-group-prepend">
-                                    <span class="input-group-text"><i class="ni ni-collection"></i></span>
+                                    <span class="input-group-text"><i class="ni ni-paper-diploma"></i></span>
                                   </div>
-                                  <input class="form-control" placeholder="Deskripsi" type="text">
+                                  <input class="form-control" placeholder="Pencapaian" type="text" name="PencapaianWeb">
                                 </div>
                               </div>
                               <div class="form-group">
-                              <div class="form-check form-check-inline">
-                                  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="Keuangan">
-                                  <label class="form-check-label" for="inlineCheckbox3">Keuangan</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="Perlengkapan">
-                                  <label class="form-check-label" for="inlineCheckbox3">Perlengkapan</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                  <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="Pembina">
-                                  <label class="form-check-label" for="inlineCheckbox3">Pembina</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                  <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="Pengawas">
-                                  <label class="form-check-label" for="inlineCheckbox3">Pengawas</label>
+                                <div class="input-group input-group-merge input-group-alternative">
+                                  <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="ni ni-settings-gear-65"></i></span>
+                                  </div>
+                                  <input class="form-control" placeholder="Kendala" type="text" name="KendalaWeb">
                                 </div>
                               </div>
+                              <div>
+                                <select class="form-control" name="role_idWeb" aria-labelledby="role">
+                                  <option value="1">Admin</option>
+                                  <option value="2">Pembina</option>
+                                  <option value="3">Pengurus</option>
+                                  <option value="4">Keuangan</option>
+                                  <option value="5">Perlengkapan</option>
+                                </select>
+                              </div>
                               <div class="text-center">
-                                <button type="button" class="btn btn-primary my-4">Tambah Data</button>
+                                <button type="submit" class="btn btn-primary my-4">Tambah Data</button>
                               </div>
                             </form>
                           </div>
-                        </div>         
-                      </div>    
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -414,55 +414,36 @@
             <th scope="col">ID</th>
             <th scope="col">Nama Program</th>
             <th scope="col">Budget</th>
-            <th scope="col">Status</th>
-            <th scope="col">Personil yang terlibat</th>
-            <th scope="col">Progress</th>
+            <th scope="col">Pencapaian</th>
+            <th scope="col">Kendala</th>
+            <th scope="col">Divisi</th>
             <th scope="col"></th>
           </tr>
         </thead>
         <tbody>
+        @foreach($proker as $prok)
           <tr>
-          <th>1</th>
+          <th>{{$prok->id_program}}</th>
             <th scope="row">
               <div class="media align-items-center">
                 <div class="media-body">
-                  <span class="mb-0 text-sm">Program Kerja A</span>
+                  <span class="mb-0 text-sm">{{$prok->nama_pengurus}}</span>
                 </div>
               </div>
             </th>
             <td>
-              Rp.15.000.000
+              {{$prok->besar_anggaran}}
             </td>
             <td>
               <span class="badge badge-dot">
-                <i class="bg-success"></i> Selesai
+                <i class="bg-success"></i> {{$prok->pencapaian}}
               </span>
             </td>
             <td>
-              <div class="avatar-group">
-                <a href="#" class="avatar avatar-sm" data-toggle="tooltip" data-original-title="Ryan Tompson">
-                  <img alt="Image placeholder" src="../../assets/img/theme/team-1-800x800.jpg" class="rounded-circle">
-                </a>
-                <a href="#" class="avatar avatar-sm" data-toggle="tooltip" data-original-title="Romina Hadid">
-                  <img alt="Image placeholder" src="../../assets/img/theme/team-2-800x800.jpg" class="rounded-circle">
-                </a>
-                <a href="#" class="avatar avatar-sm" data-toggle="tooltip" data-original-title="Alexander Smith">
-                  <img alt="Image placeholder" src="../../assets/img/theme/team-3-800x800.jpg" class="rounded-circle">
-                </a>
-                <a href="#" class="avatar avatar-sm" data-toggle="tooltip" data-original-title="Jessica Doe">
-                  <img alt="Image placeholder" src="../../assets/img/theme/team-4-800x800.jpg" class="rounded-circle">
-                </a>
-              </div>
+              {{$prok->kendala}}
             </td>
             <td>
-              <div class="d-flex align-items-center">
-                <span class="mr-2">100%</span>
-                <div>
-                  <div class="progress">
-                    <div class="progress-bar bg-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
-                  </div>
-                </div>
-              </div>
+              {{$prok->role_id}}
             </td>
             <td class="text-right">
               <div class="dropdown">
@@ -477,32 +458,36 @@
               </div>
             </td>
           </tr>
-        </tbody>
-      </table>
-      <div class="modal fade" id="response">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title"id="exampleModalLongTitle">Hapus Data</h5>
-              <button class="close" data-dismiss="modal">&times;</button>
-            </div>
-            <div class="modal-body">
-              <div class="list-group">
-                <div class="d-flex w-100 justify-content-between">
-                  <h3>Apa anda yakin akan menghapus?</h3>
+          <div class="modal fade" id="response">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title"id="exampleModalLongTitle">Hapus Data</h5>
+                  <button class="close" data-dismiss="modal">&times;</button>
                 </div>
-              </div>
-              <div class="modal-footer">
-                <button class="btn btn btn-danger">Hapus</button>
-                <button class="btn btn-primary" data-dismiss="modal">Batal</button>
+                <div class="modal-body">
+                  <div class="list-group">
+                    <div class="d-flex w-100 justify-content-between">
+                      <h3>Apa anda yakin akan menghapus?</h3>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <form action="{{ url('/dataproker/delete/'.$prok->id_program) }}" method="POST">
+                    @method('delete')
+                    @csrf
+                      <button class="btn btn btn-danger">Hapus</button>
+                      <button class="btn btn-primary" data-dismiss="modal">Batal</button>
+                    </form>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
+          @endforeach
+        </tbody>
+      </table>
     </div>
   </div>
-</div>
   <!-- Argon Scripts -->
   <!-- Core -->
   <script src="../assets/vendor/jquery/dist/jquery.min.js"></script>

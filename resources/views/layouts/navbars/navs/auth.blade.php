@@ -35,9 +35,9 @@
                         <i class="ni ni-single-02"></i>
                         <span>{{ __('My profile') }}</span>
                     </a>
-                    <a href="#" class="dropdown-item">
+                    <a href="/datarole" class="dropdown-item">
                         <i class="ni ni-settings-gear-65"></i>
-                        <span>{{ __('Settings') }}</span>
+                        <span>{{ __('Role Edit') }}</span>
                     </a>
                     <a href="#" class="dropdown-item">
                         <i class="ni ni-calendar-grid-58"></i>

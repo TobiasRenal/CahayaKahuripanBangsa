@@ -90,7 +90,7 @@
                     </a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link" href="{{ route('proker') }}">
+                    <a class="nav-link" href="/dataproker">
                         <i class="ni ni-briefcase-24 text-orange"></i> {{ __('Program Kerja') }}
                     </a>
                 </li>
