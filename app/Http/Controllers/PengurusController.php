@@ -13,8 +13,8 @@ class PengurusController extends Controller
      */
     public function index()
     {
-        $pengurus = Pengurus::get();
-        return view('pages.organisasi',["pengurus"=>$pengurus]);
+        $pengurus = Pengurus::all();
+        return view('pages.organisasi',compact('pengurus'));
     }
 
     /**
@@ -24,7 +24,7 @@ class PengurusController extends Controller
      */
     public function create(array $pengurus)
     {
-        //
+        return view('pages.organisasi');
     }
 
     /**
@@ -35,14 +35,17 @@ class PengurusController extends Controller
      */
     public function store(Request $request)
     {
-        $pengurus = new Pengurus;
-        $pengurus->role_id = $request->role_id;
-        $pengurus->nama_pengurus = $request->nama_pengurus;
-        $pengurus->tempat_lahir=$request->tempat_lahir;
-        $pengurus->tanggal_lahir=$request->tanggal_lahir;
-        $pengurus->alamat=$request->alamat;
-        $pengurus->no_telepon=$request->no_telepon;
-        $pengurus->save();
+        $request->validate([
+            'role_id'=>'required',
+            'nama_pengurus'=>'required',
+            'tempat_lahir'=>'required',
+            'tanggal_lahir'=>'required',
+            'alamat'=>'required',
+            'no_telepon'=>'required',
+        ]);
+
+        Pengurus::create($request->all());
+        return redirect()->route('pages.organisasi')->with('success','data berhasil disimpan');
     }
 
     /**
@@ -51,9 +54,9 @@ class PengurusController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(pengurus $pengurus)
     {
-        //
+        return view('pages.organisasi',compact('pengurus'));
     }
 
     /**
@@ -62,9 +65,9 @@ class PengurusController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(pengurus $pengurus)
     {
-        //
+        return view('pages.organisasi',compact('pengurus'));
     }
 
     /**
@@ -76,7 +79,17 @@ class PengurusController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'role_id'=>'required',
+            'nama_pengurus'=>'required',
+            'tempat_lahir'=>'required',
+            'tanggal_lahir'=>'required',
+            'alamat'=>'required',
+            'no_telepon'=>'required',
+        ]);
+
+        Pengurus::create($request->all());
+        return redirect()->route('pages.organisasi')->with('success');
     }
 
     /**
@@ -85,15 +98,16 @@ class PengurusController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(pengurus $pengurus)
     {
-        //
+        $pengurus >delete();
+        return redirect()->route('pages.organisasi')->with('success','Pengurus berhasil dihapus');
     }
-    public function delete($id)
-    {
-        $pengurus = pengurus::find($id);
-        $pengurus->delete();
+    // public function delete($id)
+    // {
+    //     $pengurus = pengurus::find($id);
+    //     $pengurus->delete();
 
-        return redirect('/pages/organisasi')->with('success', 'Pengurus berhasil dihapus');
-    }
+    //     return redirect('/pages/organisasi')->with('success', 'Pengurus berhasil dihapus');
+    // }
 }
