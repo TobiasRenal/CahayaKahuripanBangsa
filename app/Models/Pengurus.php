@@ -10,6 +10,7 @@ class Pengurus extends Model
     use HasFactory;
     protected $table = "pengurus";
     protected $primaryKey = 'id_pengurus';
+    protected $foreignKey = 'role_id';
     protected $fillable=[
         "role_id",
         "nama_pengurus",
