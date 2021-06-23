@@ -362,11 +362,20 @@
                                 </div>
                               </div>
                               <div class="form-group">
-                                <div class="input-group input-group-merge input-group-alternative">
+                                <label for="example-search-input" class="form-control-label">Tanggal Lahir</label>
+                                <div class="input-group">
                                   <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
                                   </div>
-                                  <input class="form-control" placeholder="Tanggal Lahir" type="text">
+                                  <input class="form-control datepicker" placeholder="Tanggal Lahir" type="text" value="06/22/2021">
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                <div class="input-group input-group-merge input-group-alternative">
+                                  <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="ni ni-square-pin"></i></span>
+                                  </div>
+                                  <input class="form-control" placeholder="Tempat Lahir" type="text">
                                 </div>
                               </div>
                               <div class="form-group">
@@ -490,6 +499,7 @@
   <script src="../assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js"></script>
   <!-- Optional JS -->
   <script src="../assets/vendor/clipboard/dist/clipboard.min.js"></script>
+  <script src="/assets/vendor/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
   <!-- Argon JS -->
   <script src="../assets/js/argon.js?v=1.2.0"></script>
 </body>

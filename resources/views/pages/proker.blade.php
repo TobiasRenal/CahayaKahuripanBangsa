@@ -371,9 +371,21 @@
                                 </div>
                               </div>
                               <div class="form-group">
-                                <div class="custom-control custom-checkbox">
-                                  <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                  <label class="custom-control-label" for="customCheck1">Tobias</label>
+                              <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="Keuangan">
+                                  <label class="form-check-label" for="inlineCheckbox3">Keuangan</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="Perlengkapan">
+                                  <label class="form-check-label" for="inlineCheckbox3">Perlengkapan</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="Pembina">
+                                  <label class="form-check-label" for="inlineCheckbox3">Pembina</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="Pengawas">
+                                  <label class="form-check-label" for="inlineCheckbox3">Pengawas</label>
                                 </div>
                               </div>
                               <div class="text-center">

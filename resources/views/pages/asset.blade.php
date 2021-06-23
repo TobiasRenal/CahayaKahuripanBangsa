@@ -355,9 +355,8 @@
                                   <input class="form-control" placeholder="Nama Asset" type="text">
                                 </div>
                               </div>
-                              <h4>Tanggal perolehan</h4>
-                              <!-- PERBAIKIN ALIGNMENTNYA -->
                               <div class="form-group">
+                                <label for="example-search-input" class="form-control-label">Tanggal Perolehan</label>
                                 <div class="input-group">
                                   <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>

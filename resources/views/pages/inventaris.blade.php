@@ -355,15 +355,14 @@
                                   <input class="form-control" placeholder="Nama Asset" type="text">
                                 </div>
                               </div>
-                              <h4>Tanggal perolehan</h4>
-                              <!-- PERBAIKIN ALIGNMENTNYA -->
                               <div class="form-group">
-                                  <div class="input-group">
-                                      <div class="input-group-prepend">
-                                          <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
-                                      </div>
-                                      <input class="form-control datepicker" placeholder="Select date" type="text" value="06/22/2021">
+                                <label for="example-search-input" class="form-control-label">Tanggal Perolehan</label>
+                                <div class="input-group">
+                                  <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
                                   </div>
+                                  <input class="form-control datepicker" placeholder="Select date" type="text" value="06/22/2021">
+                                </div>
                               </div>
                               <div class="form-group">
                                 <div class="input-group input-group-merge input-group-alternative">

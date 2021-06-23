@@ -354,6 +354,7 @@
                                 </div>
                               </div>
                               <div class="form-group">
+                                <label for="example-search-input" class="form-control-label">Tanggal Laporan Keuangan</label>
                                 <div class="input-group">
                                   <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
