@@ -85,7 +85,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('organisasi') }}">
+                    <a class="nav-link" href="/datapengurus">
                         <i class="ni ni-badge text-blue"></i> {{ __('Organisasi') }}
                     </a>
                 </li>

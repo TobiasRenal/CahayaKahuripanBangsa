@@ -337,20 +337,21 @@
                   <button type="button" class="btn btn-block btn-default" data-toggle="modal" data-target="#modal-form">Tambah Data</button>
                   <div class="modal fade" id="modal-form" tabindex="-1" role="dialog" aria-labelledby="modal-form" aria-hidden="true">
                     <div class="modal-dialog modal- modal-dialog-centered modal-sm" role="document">
-                      <div class="modal-content"> 
+                      <div class="modal-content">
                         <div class="modal-body p-0">
                           <div class="card bg-secondary border-0 mb-0">
                             <div class="card-header bg-transparent pb-5">
                               <h2 class="text-center">Tambah Data Pengurus</h2>
                             </div>
                             <div class="card-body px-lg-5 py-lg-5">
-                              <form role="form">
+                            <form action="{{ url('/datapengurus/store') }}" method="POST">
+                                @csrf
                               <div class="form-group mb-3">
                                 <div class="input-group input-group-merge input-group-alternative">
                                   <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="ni ni-single-02"></i></span>
                                   </div>
-                                  <input class="form-control" placeholder="Nama" type="text">
+                                  <input class="form-control" placeholder="Nama" type="text" name ="nama_pengurusWeb">
                                 </div>
                               </div>
                               <div class="form-group">
@@ -358,7 +359,7 @@
                                   <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="ni ni-building"></i></span>
                                   </div>
-                                  <input class="form-control" placeholder="Alamat" type="text">
+                                  <input class="form-control" placeholder="Alamat" type="text" name ="alamatWeb">
                                 </div>
                               </div>
                               <div class="form-group">
@@ -367,7 +368,7 @@
                                   <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
                                   </div>
-                                  <input class="form-control datepicker" placeholder="Tanggal Lahir" type="text" value="06/22/2021">
+                                  <input class="form-control datepicker" placeholder="Tanggal Lahir" type="text" name ="tanggal_lahirWeb">
                                 </div>
                               </div>
                               <div class="form-group">
@@ -375,7 +376,7 @@
                                   <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="ni ni-square-pin"></i></span>
                                   </div>
-                                  <input class="form-control" placeholder="Tempat Lahir" type="text">
+                                  <input class="form-control" placeholder="Tempat Lahir" type="text" name ="tempat_lahirWeb">
                                 </div>
                               </div>
                               <div class="form-group">
@@ -383,25 +384,25 @@
                                   <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="ni ni-mobile-button"></i></span>
                                   </div>
-                                  <input class="form-control" placeholder="Nomor Telepon" type="text">
+                                  <input class="form-control" placeholder="Nomor Telepon" type="text" name ="no_teleponWeb">
                                 </div>
                               </div>
-                              <div class="form-group{{ $errors->has('role_id') ? ' has-danger' : '' }}">
-                                <select class="form-control" name="role_id" aria-labelledby="role">
-                                  <option value="1" href="#">Admin</a>
-                                  <option value="2" href="#">Pembina</a>
-                                  <option value="3" href="#">Pengurus</a>
-                                  <option value="4" href="#">Keuangan</a>
-                                  <option value="5" href="#">Perlengkapan</a>
+                              <div>
+                                <select class="form-control" name="role_idWeb" aria-labelledby="role">
+                                  <option value="1">Admin</option>
+                                  <option value="2">Pembina</option>
+                                  <option value="3">Pengurus</option>
+                                  <option value="4">Keuangan</option>
+                                  <option value="5">Perlengkapan</option>
                                 </select>
                               </div>
                               <div class="text-center">
-                                <button type="button" class="btn btn-primary my-4">Tambah Data</button>
+                                <button type="submit" class="btn btn-primary my-4">Tambah Data</button>
                               </div>
                             </form>
                           </div>
-                        </div>         
-                      </div>    
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -429,29 +430,30 @@
           </tr>
         </thead>
         <tbody>
+          @foreach($pengurus as $peng)
           <tr>
             <th>1</th>
             <th scope="row">
               <div class="media align-items-center">
                 <div class="media-body">
-                  <span class="mb-0 text-sm">Admin</span>
+                  <span class="mb-0 text-sm">{{$peng->role_id}}</span>
                 </div>
               </div>
             </th>
             <td>
-              Tobias Renal Arianto
+              {{$peng->nama_pengurus}}
             </td>
             <td>
-              Jakarta
+              {{$peng->tempat_lahir}}
             </td>
             <td>
-              27 September 2000
+              {{$peng->tanggal_lahir}}
             </td>
             <td>
-              Komplek ABCD Nomor 1
+              {{$peng->alamat}}
             </td>
             <td>
-              081234567890
+              {{$peng->no_telepon}}
             </td>
             <td class="text-right">
               <div class="dropdown">
@@ -465,6 +467,7 @@
               </div>
             </td>
           </tr>
+          @endforeach
         </tbody>
       </table>
       <div class="modal fade" id="response">

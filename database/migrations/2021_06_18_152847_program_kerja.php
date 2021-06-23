@@ -15,7 +15,7 @@ class ProgramKerja extends Migration
     {
         Schema::create('program_kerja', function (Blueprint $table) {
             $table->id('id_program');
-            $table->integer('role_id');
+            $table->integer('role_id')->nullable();
             $table->foreign('role_id')->references('role_id')->on('role_pengurus');
             $table->String('nama_program');
             $table->bigInteger('besar_anggaran');

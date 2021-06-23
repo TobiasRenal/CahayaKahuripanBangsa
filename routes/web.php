@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PengurusController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -80,19 +81,21 @@ Auth::routes();
 
 Route::get('/home', 'App\Http\Controllers\HomeController@index')->name('home');
 
+Route::get('/datapengurus', [PengurusController::class, 'index']);
+Route::post('/datapengurus/store', [PengurusController::class, 'store']);
+
 Route::group(['middleware' => 'auth'], function () {
 	Route::resource('user', 'App\Http\Controllers\UserController', ['except' => ['show']]);
 	Route::get('profile', ['as' => 'profile.edit', 'uses' => 'App\Http\Controllers\ProfileController@edit']);
 	Route::put('profile', ['as' => 'profile.update', 'uses' => 'App\Http\Controllers\ProfileController@update']);
-	Route::get('upgrade', function () {return view('pages.upgrade');})->name('upgrade'); 
-	 Route::get('map', function () {return view('pages.maps');})->name('map');
-	 Route::get('icons', function () {return view('pages.icons');})->name('icons'); 
-     Route::get('organisasi', function () {return view('pages.organisasi');})->name('organisasi');
-     Route::get('proker', function () {return view('pages.proker');})->name('proker'); 
-     Route::get('asset', function () {return view('pages.asset');})->name('asset');
-     Route::get('inventaris', function () {return view('pages.inventaris');})->name('inventaris');
-     Route::get('keuangan',function() {return view('pages.keuangan');})->name('keuangan');  
-	 Route::get('table-list', function () {return view('pages.tables');})->name('table');
+	Route::get('upgrade', function () {return view('pages.upgrade');})->name('upgrade');
+	Route::get('map', function () {return view('pages.maps');})->name('map');
+	Route::get('icons', function () {return view('pages.icons');})->name('icons');
+//    Route::get('organisasi', function () {return view('pages.organisasi');})->name('organisasi');
+    Route::get('proker', function () {return view('pages.proker');})->name('proker');
+    Route::get('asset', function () {return view('pages.asset');})->name('asset');
+    Route::get('inventaris', function () {return view('pages.inventaris');})->name('inventaris');
+    Route::get('keuangan',function() {return view('pages.keuangan');})->name('keuangan');
+	Route::get('table-list', function () {return view('pages.tables');})->name('table');
 	Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'App\Http\Controllers\ProfileController@password']);
 });
-

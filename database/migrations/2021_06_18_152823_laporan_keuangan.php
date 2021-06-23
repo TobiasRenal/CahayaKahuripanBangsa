@@ -15,7 +15,7 @@ class LaporanKeuangan extends Migration
     {
         Schema::create('laporan_keuangan', function (Blueprint $table) {
             $table->id('id_keuangan');
-            $table->integer('role_id');
+            $table->integer('role_id')->nullable();
             $table->foreign('role_id')->references('role_id')->on('role_pengurus');
             $table->String('nama_Keuangan');
             $table->dateTime('tanggal_laporan_keuangan',$precision = 0);

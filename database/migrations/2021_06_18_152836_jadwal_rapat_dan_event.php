@@ -15,7 +15,7 @@ class JadwalRapatDanEvent extends Migration
     {
         Schema::create('jadwal_rapat_event', function (Blueprint $table) {
             $table->id('id_jadwal');
-            $table->integer('role_id');
+            $table->integer('role_id')->nullable();
             $table->foreign('role_id')->references('role_id')->on('role_pengurus');
             $table->String('nama_jadwal');
             $table->String('tempat');

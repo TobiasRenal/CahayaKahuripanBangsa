@@ -15,7 +15,7 @@ class Asset extends Migration
     {
         Schema::create('asset', function (Blueprint $table) {
             $table->id('id_asset');
-            $table->integer('role_id');
+            $table->integer('role_id')->nullable();
             $table->foreign('role_id')->references('role_id')->on('role_pengurus');
             $table->String('nama_asset');
             $table->dateTime('tanggal_perolehan',$precision = 0);

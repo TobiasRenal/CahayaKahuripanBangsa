@@ -19,7 +19,7 @@ class Pengurus extends Migration
             $table->foreign('role_id')->references('role_id')->on('role_pengurus');
             $table->String('nama_pengurus',255);
             $table->String('tempat_lahir');
-            $table->dateTime('tanggal_lahir',$precision = 0);
+            $table->date('tanggal_lahir',$precision = 0);
             $table->String('alamat',255);
             $table->String('no_telepon');
             $table->timestamps();
