@@ -216,11 +216,9 @@
                               </div>
                               <div>
                                 <select class="form-control" name="role_idWeb" aria-labelledby="role">
-                                  <option value="1">Admin</option>
-                                  <option value="2">Pembina</option>
-                                  <option value="3">Pengurus</option>
-                                  <option value="4">Keuangan</option>
-                                  <option value="5">Perlengkapan</option>
+                                @foreach($role as $rl)
+                                  <option value="{{$rl->role_id}}">{{$rl->role_name}}</option>
+                                @endforeach
                                 </select>
                               </div>
                               <div class="text-center">

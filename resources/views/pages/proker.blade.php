@@ -208,11 +208,9 @@
                               </div>
                               <div>
                                 <select class="form-control" name="roleidWeb" aria-labelledby="role">
-                                  <option value="1">Admin</option>
-                                  <option value="2">Pembina</option>
-                                  <option value="3">Pengurus</option>
-                                  <option value="4">Keuangan</option>
-                                  <option value="5">Perlengkapan</option>
+                                @foreach($role as $rl)
+                                  <option value="{{$rl->role_id}}">{{$rl->role_name}}</option>
+                                @endforeach
                                 </select>
                               </div>
                               <div class="text-center">
@@ -270,7 +268,7 @@
               {{$prk->kendala}}
             </td>
             <td>
-              {{$prk->role_id}}
+            {{$rl->role_name}}
             </td>
             <td class="text-right">
               <div class="dropdown">
@@ -278,7 +276,7 @@
                   <i class="fas fa-ellipsis-v"></i>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                  <a class="dropdown-item" href="#">Update</a>
+                  <a class="dropdown-item" href="{{ url('/dataproker/'.$prk->id_program) }}">Update</a>
                   <a class="dropdown-item" data-toggle="modal" data-target="#response" href="#">Hapus</a>
                 </div>
               </div>

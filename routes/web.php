@@ -95,6 +95,8 @@ Route::delete('/datapengurus/delete/{id}', [PengurusController::class, 'delete']
 
 //program kerja
 Route::get('/dataproker', [ProgramKerjaController::class, 'index']);
+Route::get('/dataproker/{id}', [ProgramKerjaController::class, 'details']);
+Route::post('/dataproker/update', [ProgramKerjaController::class, 'update']);
 Route::post('/dataproker/store', [ProgramKerjaController::class, 'store']);
 Route::delete('/dataproker/delete/{id}', [ProgramKerjaController::class, 'delete']);
 

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\ProgramKerja;
 use Illuminate\Http\Request;
+use App\Models\RolePengurus;
 
 class ProgramKerjaController extends Controller
 {
@@ -18,8 +19,9 @@ class ProgramKerjaController extends Controller
             $proker = \App\Models\ProgramKerja::where('nama_program','LIKE','%'.$request->cari.'%')->get();
         }else{
             $proker = ProgramKerja::all();
+            $role = RolePengurus::get();
         }
-        return view('pages.proker',compact('proker'));
+        return view('pages.proker',["proker"=>$proker,"role"=>$role]);
     }
 
     /**
@@ -53,10 +55,10 @@ class ProgramKerjaController extends Controller
         $proker->besar_anggaran = $request->BudgetWeb;
         $proker->pencapaian = $request->PencapaianWeb;
         $proker->kendala = $request->KendalaWeb;
-        error_log('tes error');
         $proker->save();
 
         $prk = ProgramKerja::all();
+        // $role = RolePengurus::get();
         return redirect('/dataproker')->with('success','data berhasil disimpan');
     }
 
@@ -90,18 +92,23 @@ class ProgramKerjaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
         $request->validate([
-            'role_idWeb'=>'required',
-            'NamaProgramWeb'=>'required',
+            'roleidWeb'=>'required',
+            'NamaProgramWebs'=>'required',
             'BudgetWeb'=>'required',
             'PencapaianWeb'=>'required',
             'KendalaWeb'=>'required',
         ]);
-
-        ProgramKerja::create($request->all());
-        return redirect()->route('/dataproker')->with('success');
+        $proker = ProgramKerja::find($request->id);
+        $proker->role_id = $request->roleidWeb;
+        $proker->nama_program = $request->NamaProgramWebs;
+        $proker->besar_anggaran = $request->BudgetWeb;
+        $proker->pencapaian = $request->PencapaianWeb;
+        $proker->kendala = $request->KendalaWeb;
+        $proker->save();
+        return redirect('/dataproker')->with('success');
     }
 
     /**
@@ -122,4 +129,10 @@ class ProgramKerjaController extends Controller
 
         return redirect('/dataproker')->with('success', 'Program kerja berhasil dihapus');
     }
+    public function details(Request $request)
+     {
+         $proker = ProgramKerja::find($request->id);
+         $role = RolePengurus::get();
+         return view('update.prokeru',["proker"=>$proker,"role"=>$role]);
+     }
 }
