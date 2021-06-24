@@ -394,13 +394,16 @@
         <tbody>
           @foreach($role as $rl)
           <tr>
-            <th>{{$rl->role_id}}</th>
+            <th>1</th>
             <th scope="row">
               <div class="media align-items-center">
                 <div class="media-body">
-                  <span class="mb-0 text-sm">{{$rl->role_name}}</span>
+                  <span class="mb-0 text-sm">{{$rl->role_id}}</span>
                 </div>
               </div>
+            </th>
+            <th>
+            {{$rl->role_name}}
             </th>
             <td class="text-right">
               <div class="dropdown">
