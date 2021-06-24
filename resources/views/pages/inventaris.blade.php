@@ -77,7 +77,7 @@
                 </li>
                 <li class="nav-item ">
                     <a class="nav-link" href="/inventaris">
-                        <i class="ni ni-paper-diploma text-blue"></i> Inventaris
+                        <i class="ni ni-paper-diploma text-blue"></i> <strong>Inventaris</strong>
                     </a>
                 </li>
                 <li class="nav-item ">
@@ -308,14 +308,6 @@
                 <a href="/datarole" class="dropdown-item">
                   <i class="ni ni-settings-gear-65"></i>
                   <span>Role Edit</span>
-                </a>
-                <a href="#!" class="dropdown-item">
-                  <i class="ni ni-calendar-grid-58"></i>
-                  <span>Activity</span>
-                </a>
-                <a href="#!" class="dropdown-item">
-                  <i class="ni ni-support-16"></i>
-                  <span>Support</span>
                 </a>
                 <div class="dropdown-divider"></div>
                 <a href="{{ route('logout') }}" class="dropdown-item"onclick="event.preventDefault();

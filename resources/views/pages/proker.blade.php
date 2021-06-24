@@ -67,7 +67,7 @@
             </li>
             <li class="nav-item ">
                 <a class="nav-link" href="#">
-                    <i class="ni ni-briefcase-24 text-orange"></i>Program Kerja
+                    <i class="ni ni-briefcase-24 text-orange"></i><strong>Program Kerja</strong>
                 </a>
             </li>
             <li class="nav-item ">
@@ -307,14 +307,6 @@
                 <a href="/datarole" class="dropdown-item">
                   <i class="ni ni-settings-gear-65"></i>
                   <span>Role Edit</span>
-                </a>
-                <a href="#!" class="dropdown-item">
-                  <i class="ni ni-calendar-grid-58"></i>
-                  <span>Activity</span>
-                </a>
-                <a href="#!" class="dropdown-item">
-                  <i class="ni ni-support-16"></i>
-                  <span>Support</span>
                 </a>
                 <div class="dropdown-divider"></div>
                 <a href="{{ route('logout') }}" class="dropdown-item" onclick="event.preventDefault();

@@ -80,7 +80,7 @@
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('home') }}">
-                        <i class="ni ni-tv-2 text-primary"></i> {{ __('Dashboard') }}
+                        <i class="ni ni-tv-2 text-primary"></i> <strong>{{ __('Dashboard') }}</strong>
                     </a>
                 </li>
 
