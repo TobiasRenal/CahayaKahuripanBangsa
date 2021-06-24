@@ -75,7 +75,7 @@
                     </a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link" href="/inventaris">
+                    <a class="nav-link" href="/datainventaris">
                         <i class="ni ni-paper-diploma text-blue"></i> Inventaris
                     </a>
                 </li>

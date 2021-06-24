@@ -75,12 +75,12 @@
                     </a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link" href="/inventaris">
+                    <a class="nav-link" href="/datainventaris">
                         <i class="ni ni-paper-diploma text-blue"></i> Inventaris
                     </a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link" href="/keuangan">
+                    <a class="nav-link" href="/datakeuangan">
                         <i class="ni ni-money-coins text-green"></i> Keuangan
                     </a>
                 </li>
