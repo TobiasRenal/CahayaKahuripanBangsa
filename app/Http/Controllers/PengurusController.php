@@ -12,9 +12,14 @@ class PengurusController extends Controller
      *
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $pengurus = Pengurus::all();
+        if($request->has('cari')){
+            $pengurus = \App\Models\Pengurus::where('nama_pengurus','LIKE','%'.$request->cari.'%')->get();
+        }else{
+            $pengurus = Pengurus::all();
+        }
+        
         return view('pages.organisasi',compact('pengurus'));
     }
 

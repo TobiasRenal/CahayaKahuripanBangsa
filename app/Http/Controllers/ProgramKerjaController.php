@@ -12,9 +12,13 @@ class ProgramKerjaController extends Controller
      *
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $proker = ProgramKerja::all();
+        if($request->has('cari')){
+            $proker = \App\Models\ProgramKerja::where('nama_program','LIKE','%'.$request->cari.'%')->get();
+        }else{
+            $proker = ProgramKerja::all();
+        }
         return view('pages.proker',compact('proker'));
     }
 
