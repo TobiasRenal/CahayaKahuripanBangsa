@@ -19,8 +19,8 @@ class ProgramKerjaController extends Controller
             $proker = \App\Models\ProgramKerja::where('nama_program','LIKE','%'.$request->cari.'%')->get();
         }else{
             $proker = ProgramKerja::all();
-            $role = RolePengurus::get();
         }
+        $role = RolePengurus::get();
         return view('pages.proker',["proker"=>$proker,"role"=>$role]);
     }
 

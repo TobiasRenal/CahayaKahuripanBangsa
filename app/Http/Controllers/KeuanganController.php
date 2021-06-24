@@ -13,10 +13,15 @@ class KeuanganController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $keuangan = Keuangan::all();
-        return view('pages.keuangan',compact('keuangan'));
+        if($request->has('cari')){
+            $keuangan = \App\Models\Keuangan::where('nama_Keuangan','LIKE','%'.$request->cari.'%')->get();
+        }else{
+            $keuangan = Keuangan::all();   
+        }
+        $role = RolePengurus::get();
+        return view('pages.keuangan',["keuangan"=>$keuangan,"role"=>$role]);
     }
 
     /**

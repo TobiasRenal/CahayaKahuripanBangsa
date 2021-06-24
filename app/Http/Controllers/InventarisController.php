@@ -13,10 +13,15 @@ class InventarisController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $inventaris = Inventaris::all();
-        return view('pages.inventaris',compact('inventaris'));
+        if($request->has('cari')){
+            $inventaris = \App\Models\Inventaris::where('nama_inventaris','LIKE','%'.$request->cari.'%')->get();
+        }else{
+            $inventaris = Inventaris::all();   
+        }
+        $role = RolePengurus::get();
+        return view('pages.inventaris',["inventaris"=>$inventaris,"role"=>$role]);
     }
 
     /**

@@ -13,11 +13,15 @@ class AssetController extends Controller
      *
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $asset = Asset::all();
-        $role= RolePengurus::get();
-        return view('pages.asset',compact('asset'));
+        if($request->has('cari')){
+            $asset = \App\Models\Asset::where('nama_asset','LIKE','%'.$request->cari.'%')->get();
+        }else{
+            $asset = Asset::all();   
+        }
+        $role = RolePengurus::get();
+        return view('pages.asset',["asset"=>$asset,"role"=>$role]);
     }
 
     /**
