@@ -443,7 +443,7 @@
             {{$inven->tanggal_perolehan}}
             </td>
             <td>
-            {{$inven->nilai_perolehan}}
+            {{'Rp.'.number_format($inven->nilai_perolehan, 0, ',', '.')}}
             </td>
             <td>
             {{$inven->asal_inventaris}}

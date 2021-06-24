@@ -430,7 +430,7 @@
               </div>
             </th>
             <td>
-              {{$prk->besar_anggaran}}
+              {{'Rp.'.number_format($prk->besar_anggaran, 0, ',', '.')}}
             </td>
             <td>
               <span class="badge badge-dot">

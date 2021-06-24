@@ -432,7 +432,7 @@
             {{$uang->tanggal_laporan_keuangan}}
             </td>
             <td>
-            {{$uang->jumlah}}
+            {{'Rp.'.number_format($uang->jumlah, 0, ',', '.')}}
             </td>
             <td>
             {{$uang->keterangan}}

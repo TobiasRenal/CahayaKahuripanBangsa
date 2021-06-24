@@ -446,7 +446,7 @@
              {{$set->tanggal_perolehan}}
             </td>
             <td>
-              {{$set->nilai_perolehan}}
+            {{'Rp.'.number_format($set->nilai_perolehan, 0, ',', '.')}}
             </td>
             <td>
               {{$set->asal_asset}}
