@@ -83,17 +83,21 @@ Auth::routes();
 
 Route::get('/home', 'App\Http\Controllers\HomeController@index')->name('home');
 
+//Pengurus
 Route::get('/datapengurus', [PengurusController::class, 'index']);
 Route::post('/datapengurus/store', [PengurusController::class, 'store']);
 Route::delete('/datapengurus/delete/{id}', [PengurusController::class, 'delete']);
 
+//program kerja
 Route::get('/dataproker', [ProgramKerjaController::class, 'index']);
 Route::post('/dataproker/store', [ProgramKerjaController::class, 'store']);
 Route::delete('/dataproker/delete/{id}', [ProgramKerjaController::class, 'delete']);
 
+//role
 Route::get('/datarole', [RolePengurusController::class, 'index']);
 Route::post('/datarole/store', [RolePengurusController::class, 'store']);
 Route::delete('/datarole/delete/{id}', [RolePengurusController::class, 'delete']);
+
 
 Route::group(['middleware' => 'auth'], function () {
 	Route::resource('user', 'App\Http\Controllers\UserController', ['except' => ['show']]);
