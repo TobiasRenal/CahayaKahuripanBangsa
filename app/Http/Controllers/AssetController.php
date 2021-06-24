@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Asset;
+use App\Models\RolePengurus;
 
 class AssetController extends Controller
 {
@@ -15,6 +16,7 @@ class AssetController extends Controller
     public function index()
     {
         $asset = Asset::all();
+        $role= RolePengurus::get();
         return view('pages.asset',compact('asset'));
     }
 
@@ -52,7 +54,7 @@ class AssetController extends Controller
         $asset->asal_asset = $request->asal_assetWeb;
         $asset->keterangan = $request->keteranganWeb;
         $asset->save();
-
+        
         $asset = Asset::all();
         return redirect('/dataasset')->with('success','data berhasil disimpan');
     }
@@ -87,8 +89,8 @@ class AssetController extends Controller
      * @param  int  $id
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
-    {
+    public function update(Request $request)
+    {   
         $request->validate([
             'role_idWeb'=>'required',
             'nama_assetWeb'=>'required',
@@ -98,8 +100,15 @@ class AssetController extends Controller
             'keteranganWeb'=>'required'
         ]);
 
-        Asset::create($request->all());
-        return redirect()->route('/dataasset')->with('success');
+        $asset = Asset::find($request->id);
+        $asset->role_id = $request->role_idWeb;
+        $asset->nama_asset = $request->nama_assetWeb;
+        $asset->tanggal_perolehan = $request->tanggal_assetWeb;
+        $asset->nilai_perolehan = $request->nilai_perolehanWeb;
+        $asset->asal_asset = $request->asal_assetWeb;
+        $asset->keterangan = $request->keteranganWeb;
+        $asset->save();
+        return redirect('/dataasset')->with('success');
     }
 
     /**
@@ -119,4 +128,11 @@ class AssetController extends Controller
          $asset->delete();
          return redirect('/dataasset')->with('success', 'Asset berhasil dihapus');
      }
+
+     public function details(Request $request)
+    {
+        $asset = Asset::find($request->id);
+        $role= RolePengurus::get();
+        return view('update.assetu',["asset"=>$asset,"role"=>$role]);
+    }
 }

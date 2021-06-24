@@ -457,8 +457,7 @@
                   <i class="fas fa-ellipsis-v"></i>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                  <a class="dropdown-item" href="#">Action</a>
-                  <a class="dropdown-item" href="#">Update</a>
+                  <a class="dropdown-item" href="{{ url('/datainventaris/'.$inven->id_inventaris) }}">Update</a>
                   <a class="dropdown-item" data-toggle="modal" data-target="#response" href="#">Hapus</a>
                 </div>
               </div>

@@ -98,11 +98,15 @@ Route::delete('/dataproker/delete/{id}', [ProgramKerjaController::class, 'delete
 
 //Asset
 Route::get('/dataasset', [AssetController::class, 'index']);
+Route::get('/dataasset/{id}', [AssetController::class, 'details']);
+Route::post('/dataasset/update', [AssetController::class, 'update']);
 Route::post('/dataasset/store', [AssetController::class, 'store']);
 Route::delete('/dataasset/delete/{id}', [AssetController::class, 'delete']);
 
 //Inventaris
 Route::get('/datainventaris', [InventarisController::class, 'index']);
+Route::get('/datainventaris/{id}', [InventarisController::class, 'details']);
+Route::post('/datainventaris/update', [InventarisController::class, 'update']);
 Route::post('/datainventaris/store', [InventarisController::class, 'store']);
 Route::delete('/datainventaris/delete/{id}', [InventarisController::class, 'delete']);
 

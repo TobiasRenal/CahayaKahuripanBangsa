@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Inventaris;
+use App\Models\RolePengurus;
 
 class InventarisController extends Controller
 {
@@ -87,7 +88,7 @@ class InventarisController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
         $request->validate([
             'role_idWeb'=>'required',
@@ -98,8 +99,15 @@ class InventarisController extends Controller
             'keteranganWeb'=>'required'
         ]);
 
-        Inventaris::create($request->all());
-        return redirect()->route('/datainventaris')->with('success');
+        $inventaris = Inventaris::find($request->id);
+        $inventaris->role_id = $request->role_idWeb;
+        $inventaris->nama_inventaris = $request->nama_inventarisWeb;
+        $inventaris->tanggal_perolehan = $request->tanggal_inventarisWeb;
+        $inventaris->nilai_perolehan = $request->nilai_inventarisWeb;
+        $inventaris->asal_inventaris = $request->asal_inventarisWeb;
+        $inventaris->keterangan = $request->keteranganWeb;
+        $inventaris->save();
+        return redirect('/datainventaris')->with('success');
     }
 
     /**
@@ -118,5 +126,11 @@ class InventarisController extends Controller
          $inventaris = Inventaris::find($id);
          $inventaris->delete();
          return redirect('/datainventaris')->with('success', 'Inventaris berhasil dihapus');
+     }
+     public function details(Request $request)
+     {
+         $inventaris = Inventaris::find($request->id);
+         $role= RolePengurus::get();
+         return view('update.inventarisu',["inventaris"=>$inventaris,"role"=>$role]);
      }
 }
