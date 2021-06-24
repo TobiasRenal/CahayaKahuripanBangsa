@@ -75,7 +75,7 @@ class PengurusController extends Controller
      * @param  int  $id
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\Response
      */
-    public function edit(pengurus $pengurus)
+    public function edit(Pengurus $pengurus)
     {
         return view('pages.organisasi',compact('pengurus'));
     }

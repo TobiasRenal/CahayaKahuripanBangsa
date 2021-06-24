@@ -343,13 +343,14 @@
                               <h2 class="text-center">Tambah Data Asset</h2>
                             </div>
                             <div class="card-body px-lg-5 py-lg-5">
-                              <form role="form">
+                              <form action="{{url('/dataasset/store')}}" method ="POST">
+                                @csrf
                               <div class="form-group mb-3">
                                 <div class="input-group input-group-merge input-group-alternative">
                                   <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="ni ni-single-02"></i></span>
                                   </div>
-                                  <input class="form-control" placeholder="Nama Asset" type="text">
+                                  <input class="form-control" placeholder="Nama Asset" type="text" name="nama_assetWeb">
                                 </div>
                               </div>
                               <div class="form-group">
@@ -358,7 +359,7 @@
                                   <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
                                   </div>
-                                  <input class="form-control datepicker" placeholder="Select date" type="text" value="06/22/2021">
+                                  <input class="form-control datepicker" placeholder="Select date" type="text" name="tanggal_perolehanWeb">
                                 </div>
                               </div>
                               <div class="form-group">
@@ -366,7 +367,7 @@
                                   <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="ni ni-money-coins"></i></span>
                                   </div>
-                                  <input class="form-control" placeholder="Nilai Perolehan" type="text">
+                                  <input class="form-control" placeholder="Nilai Perolehan" type="text" name="nilai_perolehanWeb">
                                 </div>
                               </div>
                               <div class="form-group">
@@ -374,7 +375,7 @@
                                   <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="ni ni-paper-diploma"></i></span>
                                   </div>
-                                  <input class="form-control" placeholder="Asal asset" type="text">
+                                  <input class="form-control" placeholder="Asal asset" type="text" name="asal_assetWeb">
                                 </div>
                               </div>
                               <div class="form-group">
@@ -382,11 +383,20 @@
                                   <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="ni ni-single-copy-04"></i></span>
                                   </div>
-                                  <input class="form-control" placeholder="Keterangan" type="text">
+                                  <input class="form-control" placeholder="Keterangan" type="text" name="keteranganWeb">
                                 </div>
                               </div>
+                              <div>
+                                <select class="form-control" name="role_idWeb" aria-labelledby="role">
+                                  <option value="1">Admin</option>
+                                  <option value="2">Pembina</option>
+                                  <option value="3">Pengurus</option>
+                                  <option value="4">Keuangan</option>
+                                  <option value="5">Perlengkapan</option>
+                                </select>
+                              </div>
                               <div class="text-center">
-                                <button type="button" class="btn btn-primary my-4">Tambah Data</button>
+                                <button type="submit" class="btn btn-primary my-4">Tambah Data</button>
                               </div>
                             </form>
                           </div>
@@ -409,6 +419,7 @@
         <thead class="thead-light">
           <tr>
             <th scope="col">ID</th>
+            <th scope="col">Role ID</th>
             <th scope="col">Nama Asset</th>
             <th scope="col">Tanggal perolehan</th>
             <th scope="col">Nilai perolehan</th>
@@ -418,26 +429,30 @@
           </tr>
         </thead>
         <tbody>
+        @foreach($asset as $set) 
           <tr>
-            <th>1</th>
+            <th>{{$set->id_asset}}</th>
             <th scope="row">
               <div class="media align-items-center">
                 <div class="media-body">
-                  <span class="mb-0 text-sm">Gedung</span>
+                  <span class="mb-0 text-sm">{{$peng->role_id}}</span>
                 </div>
               </div>
             </th>
             <td>
-              27 Oktober 2021
+            {{$set->nama_asset}}
             </td>
             <td>
-                Rp 1,000,000,000
+             {{$set->tanggal_perolehan}}
             </td>
             <td>
-              Giveaway
+              {{$set->nilai_perolehan}}
             </td>
             <td>
-             Mulus no minus
+              {{$set->asal_asset}}
+            </td>
+            <td>
+             {{$set->keterangan}}
             </td>
             <td class="text-right">
               <div class="dropdown">
@@ -452,9 +467,7 @@
               </div>
             </td>
           </tr>
-        </tbody>
-      </table>
-      <div class="modal fade" id="response">
+          <div class="modal fade" id="response">
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-header">
@@ -468,12 +481,19 @@
                 </div>
               </div>
               <div class="modal-footer">
-                <button class="btn btn btn-danger">Hapus</button>
-                <button class="btn btn-primary" data-dismiss="modal">Batal</button>
+                <form action="{{ url('/dataasset/delete/'.$set->id_asset) }}" method="POST">
+                  @method('delete')
+                  @csrf
+                <button type="submit" class="btn btn btn-danger">Hapus</button>
+                <button type="submit "class="btn btn-primary" data-dismiss="modal">Batal</button>
+                </form>
               </div>
             </div>
           </div>
         </div>
+          @endforeach
+        </tbody>
+      </table>
       </div>
     </div>
   </div>

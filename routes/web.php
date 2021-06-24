@@ -3,6 +3,7 @@
 use App\Http\Controllers\PengurusController;
 use App\Http\Controllers\ProgramKerjaController;
 use App\Http\Controllers\RolePengurusController;
+use App\Http\Controllers\AssetController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -92,6 +93,11 @@ Route::delete('/datapengurus/delete/{id}', [PengurusController::class, 'delete']
 Route::get('/dataproker', [ProgramKerjaController::class, 'index']);
 Route::post('/dataproker/store', [ProgramKerjaController::class, 'store']);
 Route::delete('/dataproker/delete/{id}', [ProgramKerjaController::class, 'delete']);
+
+//Asset
+Route::get('/dataasset', [AssetController::class, 'index']);
+Route::post('/dataasset/store', [AssetController::class, 'store']);
+Route::delete('/dataasset/delete/{id}', [AssetController::class, 'delete']);
 
 //role
 Route::get('/datarole', [RolePengurusController::class, 'index']);

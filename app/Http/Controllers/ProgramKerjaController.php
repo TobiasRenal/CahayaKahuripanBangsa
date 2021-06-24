@@ -43,7 +43,7 @@ class ProgramKerjaController extends Controller
             'PencapaianWeb'=>'required',
             'KendalaWeb'=>'required',
         ]);
-        $proker = new Pengurus();
+        $proker = new ProgramKerja();
         $proker->role_id = $request->role_idWeb;
         $proker->nama_program = $request->NamaProgramWebs;
         $proker->besar_anggaran = $request->BudgetWeb;
@@ -106,14 +106,15 @@ class ProgramKerjaController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
-    {
-        //
+    {        
+        $pengurus >delete();
+        return redirect()->route('/dataproker')->with('success','Program kerja berhasil dihapus');
     }
     public function delete($id)
     {
         $proker = ProgramKerja::find($id);
         $proker->delete();
 
-        return redirect('/dataproker')->with('success', 'Pengurus berhasil dihapus');
+        return redirect('/dataproker')->with('success', 'Program kerja berhasil dihapus');
     }
 }
