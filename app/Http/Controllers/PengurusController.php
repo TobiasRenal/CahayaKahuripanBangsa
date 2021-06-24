@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Pengurus;
+use App\Models\RolePengurus;
 
 class PengurusController extends Controller
 {
@@ -92,19 +93,26 @@ class PengurusController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\RedirectResponse|\Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
         $request->validate([
-            'role_id'=>'required',
-            'nama_pengurus'=>'required',
-            'tempat_lahir'=>'required',
-            'tanggal_lahir'=>'required',
-            'alamat'=>'required',
-            'no_telepon'=>'required',
+            'role_idWeb'=>'required',
+            'nama_pengurusWeb'=>'required',
+            'tempat_lahirWeb'=>'required',
+            'tanggal_lahirWeb'=>'required',
+            'alamatWeb'=>'required',
+            'no_teleponWeb'=>'required',
         ]);
 
-        Pengurus::create($request->all());
-        return redirect()->route('/datapengurus')->with('success');
+        $pengurus = Pengurus::find($request->id);
+        $pengurus->role_id = $request->role_idWeb;
+        $pengurus->nama_pengurus = $request->nama_pengurusWeb;
+        $pengurus->tempat_lahir = $request->tempat_lahirWeb;
+        $pengurus->tanggal_lahir = $request->tanggal_lahirWeb;
+        $pengurus->alamat = $request->alamatWeb;
+        $pengurus->no_telepon = $request->no_teleponWeb;
+        $pengurus->save();
+        return redirect('/datapengurus')->with('success');
     }
 
     /**
@@ -122,7 +130,12 @@ class PengurusController extends Controller
      {
          $pengurus = Pengurus::find($id);
          $pengurus->delete();
-
          return redirect('/datapengurus')->with('success', 'Pengurus berhasil dihapus');
+     }
+     public function details(Request $request)
+     {
+         $pengurus = Pengurus::find($request->id);
+         $role = RolePengurus::get();
+         return view('update.organisasiu',["pengurus"=>$pengurus,"role"=>$role]);
      }
 }
