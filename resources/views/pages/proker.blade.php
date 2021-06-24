@@ -71,7 +71,7 @@
                 </a>
             </li>
             <li class="nav-item ">
-                    <a class="nav-link" href="/asset">
+                    <a class="nav-link" href="/dataasset">
                         <i class="ni ni-paper-diploma text-blue"></i> Asset
                     </a>
                 </li>
@@ -343,7 +343,7 @@
                               <h2 class="text-center">Tambah Program Kerja</h2>
                             </div>
                             <div class="card-body px-lg-5 py-lg-5">
-                              <form role="form" action="{{ url('/dataproker/store') }}" method="POST">
+                              <form action="{{ url('/dataproker/store') }}" method="POST">
                               @csrf
                               <div class="form-group mb-3">
                                 <div class="input-group input-group-merge input-group-alternative">
@@ -378,7 +378,7 @@
                                 </div>
                               </div>
                               <div>
-                                <select class="form-control" name="role_idWeb" aria-labelledby="role">
+                                <select class="form-control" name="roleidWeb" aria-labelledby="role">
                                   <option value="1">Admin</option>
                                   <option value="2">Pembina</option>
                                   <option value="3">Pengurus</option>
@@ -419,29 +419,29 @@
           </tr>
         </thead>
         <tbody>
-        @foreach($proker as $prok)
+        @foreach($proker as $prk)
           <tr>
-          <th>{{$prok->id_program}}</th>
+          <th>{{$prk->id_program}}</th>
             <th scope="row">
               <div class="media align-items-center">
                 <div class="media-body">
-                  <span class="mb-0 text-sm">{{$prok->nama_pengurus}}</span>
+                  <span class="mb-0 text-sm">{{$prk->nama_program}}</span>
                 </div>
               </div>
             </th>
             <td>
-              {{$prok->besar_anggaran}}
+              {{$prk->besar_anggaran}}
             </td>
             <td>
               <span class="badge badge-dot">
-                <i class="bg-success"></i> {{$prok->pencapaian}}
+                <i class="bg-success"></i> {{$prk->pencapaian}}
               </span>
             </td>
             <td>
-              {{$prok->kendala}}
+              {{$prk->kendala}}
             </td>
             <td>
-              {{$prok->role_id}}
+              {{$prk->role_id}}
             </td>
             <td class="text-right">
               <div class="dropdown">
@@ -470,7 +470,7 @@
                     </div>
                   </div>
                   <div class="modal-footer">
-                    <form action="{{ url('/dataproker/delete/'.$prok->id_program) }}" method="POST">
+                    <form action="{{ url('/dataproker/delete/'.$prk->id_program) }}" method="POST">
                     @method('delete')
                     @csrf
                       <button class="btn btn btn-danger">Hapus</button>

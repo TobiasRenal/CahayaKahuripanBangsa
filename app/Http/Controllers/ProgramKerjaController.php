@@ -23,7 +23,7 @@ class ProgramKerjaController extends Controller
      *
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\Response
      */
-    public function create()
+    public function create(array $proker)
     {
         return view('pages.proker');
     }
@@ -37,21 +37,22 @@ class ProgramKerjaController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'role_idWeb'=>'required',
-            'NamaProgramWeb'=>'required',
+            'roleidWeb'=>'required',
+            'NamaProgramWebs'=>'required',
             'BudgetWeb'=>'required',
             'PencapaianWeb'=>'required',
             'KendalaWeb'=>'required',
         ]);
         $proker = new ProgramKerja();
-        $proker->role_id = $request->role_idWeb;
+        $proker->role_id = $request->roleidWeb;
         $proker->nama_program = $request->NamaProgramWebs;
         $proker->besar_anggaran = $request->BudgetWeb;
         $proker->pencapaian = $request->PencapaianWeb;
         $proker->kendala = $request->KendalaWeb;
+        error_log('tes error');
         $proker->save();
 
-        $pgrs = ProgramKerja::all();
+        $prk = ProgramKerja::all();
         return redirect('/dataproker')->with('success','data berhasil disimpan');
     }
 
@@ -61,7 +62,7 @@ class ProgramKerjaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(ProgramKerja $proker)
     {
         $proker = ProgramKerja::all();
         return view('pages.proker',compact('proker'));
@@ -73,7 +74,7 @@ class ProgramKerjaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(ProgramKerja $proker)
     {
         return view('pages.proker',compact('proker'));
     }
@@ -103,11 +104,11 @@ class ProgramKerjaController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\RedirectResponse
      */
-    public function destroy($id)
-    {        
-        $pengurus >delete();
+    public function destroy(ProgramKerja $proker)
+    {
+        $proker >delete();
         return redirect()->route('/dataproker')->with('success','Program kerja berhasil dihapus');
     }
     public function delete($id)

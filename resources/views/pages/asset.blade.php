@@ -71,7 +71,7 @@
                 </a>
             </li>
             <li class="nav-item ">
-              <a class="nav-link" href="/asset">
+              <a class="nav-link" href="/dataasset">
                 <i class="ni ni-paper-diploma text-blue"></i> <strong>Asset</strong>
               </a>
             </li>
@@ -336,7 +336,7 @@
                   <button type="button" class="btn btn-block btn-default" data-toggle="modal" data-target="#modal-form">Tambah Data</button>
                   <div class="modal fade" id="modal-form" tabindex="-1" role="dialog" aria-labelledby="modal-form" aria-hidden="true">
                     <div class="modal-dialog modal- modal-dialog-centered modal-sm" role="document">
-                      <div class="modal-content"> 
+                      <div class="modal-content">
                         <div class="modal-body p-0">
                           <div class="card bg-secondary border-0 mb-0">
                             <div class="card-header bg-transparent pb-5">
@@ -359,7 +359,7 @@
                                   <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
                                   </div>
-                                  <input class="form-control datepicker" placeholder="Select date" type="text" name="tanggal_perolehanWeb">
+                                  <input class="form-control datepicker" placeholder="Select date" type="text" name="tanggal_assetWeb">
                                 </div>
                               </div>
                               <div class="form-group">
@@ -400,8 +400,8 @@
                               </div>
                             </form>
                           </div>
-                        </div>         
-                      </div>    
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -429,7 +429,7 @@
           </tr>
         </thead>
         <tbody>
-        @foreach($asset as $set) 
+        @foreach($asset as $set)
           <tr>
             <th>{{$set->id_asset}}</th>
             <th scope="row">

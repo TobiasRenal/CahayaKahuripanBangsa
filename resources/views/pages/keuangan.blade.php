@@ -70,7 +70,7 @@
                 </a>
             </li>
             <li class="nav-item ">
-                    <a class="nav-link" href="/asset">
+                    <a class="nav-link" href="/dataasset">
                         <i class="ni ni-paper-diploma text-blue"></i> Asset
                     </a>
                 </li>

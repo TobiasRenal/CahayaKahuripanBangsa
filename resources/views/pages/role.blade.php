@@ -35,6 +35,11 @@
 </head>
 
 <body>
+  @auth()
+    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+    @csrf
+    </form>
+  @endauth
   <!-- Sidenav -->
   <nav class="sidenav navbar navbar-vertical  fixed-left  navbar-expand-xs navbar-light bg-white" id="sidenav-main">
     <div class="scrollbar-inner">
@@ -65,7 +70,7 @@
                 </a>
             </li>
             <li class="nav-item ">
-                    <a class="nav-link" href="/asset">
+                    <a class="nav-link" href="/dataasset">
                         <i class="ni ni-paper-diploma text-blue"></i> Asset
                     </a>
                 </li>
@@ -303,7 +308,8 @@
                   <span>Role Edit</span>
                 </a>
                 <div class="dropdown-divider"></div>
-                <a href="#!" class="dropdown-item">
+                <a href="{{ route('logout') }}" class="dropdown-item" onclick="event.preventDefault();
+                    document.getElementById('logout-form').submit();">
                   <i class="ni ni-user-run"></i>
                   <span>Logout</span>
                 </a>

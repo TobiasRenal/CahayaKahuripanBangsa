@@ -48,7 +48,7 @@ class AssetController extends Controller
         $asset->role_id = $request->role_idWeb;
         $asset->nama_asset = $request->nama_assetWeb;
         $asset->tanggal_perolehan = $request->tanggal_assetWeb;
-        $asset->nilai_perolehan = $request->nilai_perolehanWeb;
+        $asset->nilai_perolehan = $request->tanggal_assetWeb;
         $asset->asal_asset = $request->asal_assetWeb;
         $asset->keterangan = $request->keteranganWeb;
         $asset->save();
