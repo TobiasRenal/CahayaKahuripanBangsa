@@ -88,6 +88,8 @@ Route::get('/home', 'App\Http\Controllers\HomeController@index')->name('home');
 
 //Pengurus
 Route::get('/datapengurus', [PengurusController::class, 'index']);
+Route::get('/datapengurus/{id}', [PengurusController::class, 'details']);
+Route::post('/datapengurus/update', [PengurusController::class, 'update']);
 Route::post('/datapengurus/store', [PengurusController::class, 'store']);
 Route::delete('/datapengurus/delete/{id}', [PengurusController::class, 'delete']);
 
