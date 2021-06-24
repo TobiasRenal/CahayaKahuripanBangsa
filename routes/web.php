@@ -112,6 +112,8 @@ Route::delete('/datainventaris/delete/{id}', [InventarisController::class, 'dele
 
 //Keuangan
 Route::get('/datakeuangan', [KeuanganController::class, 'index']);
+Route::get('/datakeuangan/{id}', [KeuanganController::class, 'details']);
+Route::post('/datakeuangan/update', [KeuanganController::class, 'update']);
 Route::post('/datakeuangan/store', [KeuanganController::class, 'store']);
 Route::delete('/datakeuangan/delete/{id}', [KeuanganController::class, 'delete']);
 

@@ -99,7 +99,7 @@ class InventarisController extends Controller
             'keteranganWeb'=>'required'
         ]);
 
-        $inventaris = Inventaris::find($request->id);
+        $inventaris = Inventaris::Find($request->id);
         $inventaris->role_id = $request->role_idWeb;
         $inventaris->nama_inventaris = $request->nama_inventarisWeb;
         $inventaris->tanggal_perolehan = $request->tanggal_inventarisWeb;

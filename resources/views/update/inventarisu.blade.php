@@ -35,12 +35,13 @@
 </head>
 
 <body>
-                            <div class="card-header bg-transparent pb-5">
+                        <div class="card-header bg-transparent pb-5">
                               <h2 class="text-center">Tambah Data Inventaris</h2>
                             </div>
                             <div class="card-body px-lg-5 py-lg-5">
                             <form action="{{url('/datainventaris/update')}}" enctype="multipart/form-data" method ="POST">
                               @csrf
+                              <input name="id" type="hidden" value="{{ $inventaris->id_inventaris }}"/>
                               <div class="form-group mb-3">
                                 <div class="input-group input-group-merge input-group-alternative">
                                   <div class="input-group-prepend">

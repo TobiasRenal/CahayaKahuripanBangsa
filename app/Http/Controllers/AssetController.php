@@ -100,7 +100,7 @@ class AssetController extends Controller
             'keteranganWeb'=>'required'
         ]);
 
-        $asset = Asset::find($request->id);
+        $asset = Asset::Find($request->id);
         $asset->role_id = $request->role_idWeb;
         $asset->nama_asset = $request->nama_assetWeb;
         $asset->tanggal_perolehan = $request->tanggal_assetWeb;

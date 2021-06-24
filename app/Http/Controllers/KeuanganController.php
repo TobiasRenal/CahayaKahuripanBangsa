@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Keuangan;
+use App\Models\RolePengurus;
 
 class KeuanganController extends Controller
 {
@@ -85,7 +86,7 @@ class KeuanganController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
         $request->validate([
             'role_idWeb'=>'required',
@@ -95,8 +96,14 @@ class KeuanganController extends Controller
             'keteranganWeb'=>'required'
         ]);
 
-        Keuangan::create($request->all());
-        return redirect()->route('/datakeuangan')->with('success');
+        $keuangan = Keuangan::Find($request->id);
+        $keuangan->role_id = $request->role_idWeb;
+        $keuangan->nama_Keuangan = $request->nama_keuanganWeb;
+        $keuangan->tanggal_laporan_keuangan = $request->tanggal_keuanganWeb;
+        $keuangan->jumlah = $request->jumlahWeb;
+        $keuangan->keterangan = $request->keteranganWeb;
+        $keuangan->save();
+        return redirect('/datakeuangan')->with('success');
     }
 
     /**
@@ -115,5 +122,11 @@ class KeuanganController extends Controller
          $keuangan = Keuangan::find($id);
          $keuangan->delete();
          return redirect('/datakeuangan')->with('success', 'Laporan Keuangan berhasil dihapus');
+     }
+     public function details(Request $request)
+     {
+         $keuangan = Keuangan::find($request->id);
+         $role= RolePengurus::get();
+         return view('update.keuanganu',["keuangan"=>$keuangan,"role"=>$role]);
      }
 }
