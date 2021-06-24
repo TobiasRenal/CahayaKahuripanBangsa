@@ -342,13 +342,14 @@
                               <h2 class="text-center">Tambah Laporan Keuangan</h2>
                             </div>
                             <div class="card-body px-lg-5 py-lg-5">
-                              <form role="form">
+                            <form action="{{url('/datakeuangan/store')}}" method ="POST">
+                              @csrf
                               <div class="form-group mb-3">
                                 <div class="input-group input-group-merge input-group-alternative">
                                   <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="ni ni-single-02"></i></span>
                                   </div>
-                                  <input class="form-control" placeholder="Nama Laporan" type="text">
+                                  <input class="form-control" placeholder="Nama Laporan" type="text" name="nama_keuanganWeb">
                                 </div>
                               </div>
                               <div class="form-group">
@@ -357,7 +358,7 @@
                                   <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
                                   </div>
-                                  <input class="form-control datepicker" placeholder="Select date" type="text" value="06/22/2021">
+                                  <input class="form-control datepicker" placeholder="Select date" type="text" name="tanggal_keuanganWeb">
                                 </div>
                               </div>
                               <div class="form-group">
@@ -365,7 +366,7 @@
                                   <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
                                   </div>
-                                  <input class="form-control" placeholder="Jumlah" type="text">
+                                  <input class="form-control" placeholder="Jumlah" type="text" name="jumlahWeb">
                                 </div>
                               </div>
                               <div class="form-group">
@@ -373,11 +374,20 @@
                                   <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="ni ni-mobile-button"></i></span>
                                   </div>
-                                  <input class="form-control" placeholder="Keterangan" type="text">
+                                  <input class="form-control" placeholder="Keterangan" type="text" name="keteranganWeb">
                                 </div>
                               </div>
+                              <div>
+                                <select class="form-control" name="role_idWeb" aria-labelledby="role">
+                                  <option value="1">Admin</option>
+                                  <option value="2">Pembina</option>
+                                  <option value="3">Pengurus</option>
+                                  <option value="4">Keuangan</option>
+                                  <option value="5">Perlengkapan</option>
+                                </select>
+                              </div>
                               <div class="text-center">
-                                <button type="button" class="btn btn-primary my-4">Tambah Data</button>
+                                <button type="submit" class="btn btn-primary my-4">Tambah Data</button>
                               </div>
                             </form>
                           </div>
@@ -408,23 +418,24 @@
           </tr>
         </thead>
         <tbody>
+        @foreach($keuangan as $uang)
           <tr>
-            <th>1</th>
+            <th>{{$uang->id_keuangan}}</th>
             <th scope="row">
               <div class="media align-items-center">
                 <div class="media-body">
-                <span class="mb-0 text-sm">Keuangan Pengurus Inti</span>
+                <span class="mb-0 text-sm">{{$uang->nama_Keuangan}}</span>
                 </div>
               </div>
             </th>
             <td>
-              10 Oktober 2021
+            {{$uang->tanggal_laporan_keuangan}}
             </td>
             <td>
-                Rp 20,000,000
+            {{$uang->jumlah}}
             </td>
             <td>
-                Jangan digunakan
+            {{$uang->keterangan}}
             </td>
             <td class="text-right">
               <div class="dropdown">
@@ -439,9 +450,7 @@
               </div>
             </td>
           </tr>
-        </tbody>
-      </table>
-      <div class="modal fade" id="response">
+        <div class="modal fade" id="response">
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-header">
@@ -455,13 +464,20 @@
                 </div>
               </div>
               <div class="modal-footer">
-                <button class="btn btn btn-danger">Hapus</button>
-                <button class="btn btn-primary" data-dismiss="modal">Batal</button>
+              <form action="{{ url('/datakeuangan/delete/'.$uang->id_keuangan) }}" method="POST">
+                  @method('delete')
+                  @csrf
+                <button type="submit" class="btn btn btn-danger">Hapus</button>
+                <button type="submit "class="btn btn-primary" data-dismiss="modal">Batal</button>
+              </form>
               </div>
             </div>
           </div>
         </div>
       </div>
+      @endforeach
+        </tbody>
+      </table>
     </div>
   </div>
 </div>

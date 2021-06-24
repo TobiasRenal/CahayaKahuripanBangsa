@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Inventaris;
 
 class InventarisController extends Controller
 {
@@ -13,7 +14,8 @@ class InventarisController extends Controller
      */
     public function index()
     {
-        //
+        $inventaris = Inventaris::all();
+        return view('pages.inventaris',compact('inventaris'));
     }
 
     /**
@@ -21,9 +23,9 @@ class InventarisController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(array $inventaris)
     {
-        //
+        return view('pages.inventaris');
     }
 
     /**
@@ -34,7 +36,25 @@ class InventarisController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'role_idWeb'=>'required',
+            'nama_inventarisWeb'=>'required',
+            'tanggal_inventarisWeb'=>'required',
+            'nilai_inventarisWeb'=>'required',
+            'asal_inventarisWeb'=>'required',
+            'keteranganWeb'=>'required'
+        ]);
+        $inventaris = new Inventaris();
+        $inventaris->role_id = $request->role_idWeb;
+        $inventaris->nama_inventaris = $request->nama_inventarisWeb;
+        $inventaris->tanggal_perolehan = $request->tanggal_inventarisWeb;
+        $inventaris->nilai_perolehan = $request->nilai_inventarisWeb;
+        $inventaris->asal_inventaris = $request->asal_inventarisWeb;
+        $inventaris->keterangan = $request->keteranganWeb;
+        $inventaris->save();
+
+        $inventaris = Inventaris::all();
+        return redirect('/datainventaris')->with('success','data berhasil disimpan');
     }
 
     /**
@@ -43,9 +63,10 @@ class InventarisController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Inventaris $inventaris)
     {
-        //
+        $inventaris = Inventaris::all();
+        return view('pages.inventaris',compact('inventaris'));
     }
 
     /**
@@ -54,9 +75,9 @@ class InventarisController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Inventaris $inventaris)
     {
-        //
+        return view('pages.inventaris',compact('inventaris'));
     }
 
     /**
@@ -68,7 +89,17 @@ class InventarisController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'role_idWeb'=>'required',
+            'nama_inventarisWeb'=>'required',
+            'tanggal_inventarisWeb'=>'required',
+            'nilai_inventarisWeb'=>'required',
+            'asal_inventarisWeb'=>'required',
+            'keteranganWeb'=>'required'
+        ]);
+
+        Inventaris::create($request->all());
+        return redirect()->route('/datainventaris')->with('success');
     }
 
     /**
@@ -77,8 +108,15 @@ class InventarisController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Inventaris $inventaris)
     {
-        //
+        $inventaris >delete();
+        return redirect()->route('/datainventaris')->with('success','Inventaris berhasil dihapus');
     }
+     public function delete($id)
+     {
+         $inventaris = Inventaris::find($id);
+         $inventaris->delete();
+         return redirect('/datainventaris')->with('success', 'Inventaris berhasil dihapus');
+     }
 }

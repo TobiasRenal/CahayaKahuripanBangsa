@@ -4,6 +4,8 @@ use App\Http\Controllers\PengurusController;
 use App\Http\Controllers\ProgramKerjaController;
 use App\Http\Controllers\RolePengurusController;
 use App\Http\Controllers\AssetController;
+use App\Http\Controllers\InventarisController;
+use App\Http\Controllers\KeuanganController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -98,6 +100,16 @@ Route::delete('/dataproker/delete/{id}', [ProgramKerjaController::class, 'delete
 Route::get('/dataasset', [AssetController::class, 'index']);
 Route::post('/dataasset/store', [AssetController::class, 'store']);
 Route::delete('/dataasset/delete/{id}', [AssetController::class, 'delete']);
+
+//Inventaris
+Route::get('/datainventaris', [InventarisController::class, 'index']);
+Route::post('/datainventaris/store', [InventarisController::class, 'store']);
+Route::delete('/datainventaris/delete/{id}', [InventarisController::class, 'delete']);
+
+//Keuangan
+Route::get('/datakeuangan', [KeuanganController::class, 'index']);
+Route::post('/datakeuangan/store', [KeuanganController::class, 'store']);
+Route::delete('/datakeuangan/delete/{id}', [KeuanganController::class, 'delete']);
 
 //role
 Route::get('/datarole', [RolePengurusController::class, 'index']);

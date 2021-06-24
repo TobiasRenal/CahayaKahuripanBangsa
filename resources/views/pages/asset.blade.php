@@ -419,7 +419,7 @@
         <thead class="thead-light">
           <tr>
             <th scope="col">ID</th>
-            <th scope="col">Role ID</th>
+            <!-- <th scope="col">Role ID</th> -->
             <th scope="col">Nama Asset</th>
             <th scope="col">Tanggal perolehan</th>
             <th scope="col">Nilai perolehan</th>
@@ -432,13 +432,13 @@
         @foreach($asset as $set)
           <tr>
             <th>{{$set->id_asset}}</th>
-            <th scope="row">
+            <!-- <th scope="row">
               <div class="media align-items-center">
                 <div class="media-body">
-                  <span class="mb-0 text-sm">{{$peng->role_id}}</span>
+                  <span class="mb-0 text-sm">{{$set->role_id}}</span>
                 </div>
               </div>
-            </th>
+            </th> -->
             <td>
             {{$set->nama_asset}}
             </td>
