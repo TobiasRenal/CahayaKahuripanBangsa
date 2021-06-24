@@ -35,6 +35,11 @@
 </head>
 
 <body>
+  @auth()
+    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+    @csrf
+    </form>
+  @endauth
   <!-- Sidenav -->
   <nav class="sidenav navbar navbar-vertical  fixed-left  navbar-expand-xs navbar-light bg-white" id="sidenav-main">
     <div class="scrollbar-inner">
@@ -312,7 +317,8 @@
                   <span>Support</span>
                 </a>
                 <div class="dropdown-divider"></div>
-                <a href="#!" class="dropdown-item">
+                <a href="{{ route('logout') }}" class="dropdown-item" onclick="event.preventDefault();
+                    document.getElementById('logout-form').submit();">
                   <i class="ni ni-user-run"></i>
                   <span>Logout</span>
                 </a>

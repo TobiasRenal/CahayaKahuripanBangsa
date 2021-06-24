@@ -35,6 +35,11 @@
 </head>
 
 <body>
+  @auth()
+    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+    @csrf
+    </form>
+  @endauth
   <!-- Sidenav -->
   <nav class="sidenav navbar navbar-vertical  fixed-left  navbar-expand-xs navbar-light bg-white" id="sidenav-main">
     <div class="scrollbar-inner">
