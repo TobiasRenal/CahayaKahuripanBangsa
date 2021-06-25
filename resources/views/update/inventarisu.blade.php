@@ -91,7 +91,7 @@
                                 </select>
                               </div>
                               <div class="text-center">
-                                <button type="submit" class="btn btn-primary my-4">Tambah Data</button>
+                                <button type="submit" class="btn btn-primary my-4">Ubah Data</button>
                               </div>
                             </form>
   <!-- Argon Scripts -->
