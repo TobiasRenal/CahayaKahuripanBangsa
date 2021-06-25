@@ -149,6 +149,15 @@
       </div>
     </nav>
     <!-- Header -->
+    @if(session('success'))
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+      <span class="alert-icon"><i class="ni ni-like-2"></i></span>
+      <span class="alert-text"><strong>Success!</strong> Data berhasil ditambahkan!</span>
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    @endif
     <!-- Header -->
     <div class="header bg-primary pb-6">
       <div class="container-fluid">
@@ -221,6 +230,7 @@
                                 @endforeach
                                 </select>
                               </div>
+                              
                               <div class="text-center">
                                 <button type="submit" class="btn btn-primary my-4">Tambah Data</button>
                               </div>
@@ -240,6 +250,7 @@
       </div>
     </div>
     <!-- Page content -->
+    
     <div class="table-responsive">
       <table class="table align-items-center">
         <thead class="thead-light">
@@ -257,7 +268,7 @@
         <tbody>
           @foreach($pengurus as $peng)
           <tr>
-            <th>{{$peng->id_pengurus}}</th>
+            <th>{{'PG-'.$peng->id_pengurus}}</th>
             <th scope="row">
               <div class="media align-items-center">
                 <div class="media-body">
