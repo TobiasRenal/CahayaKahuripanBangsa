@@ -18,7 +18,7 @@ class PengurusController extends Controller
         if($request->has('cari')){
             $pengurus = \App\Models\Pengurus::where('nama_pengurus','LIKE','%'.$request->cari.'%')->get();
         }else{
-            $pengurus = Pengurus::all();   
+            $pengurus = Pengurus::all();
         }
         $role = RolePengurus::get();
         return view('pages.organisasi',["pengurus"=>$pengurus,"role"=>$role]);

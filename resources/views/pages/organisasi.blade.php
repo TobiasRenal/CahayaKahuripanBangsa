@@ -268,7 +268,7 @@
         <tbody>
           @foreach($pengurus as $peng)
           <tr>
-            <th>{{$peng->id_pengurus}}</th>
+            <th>{{'PG-'.$peng->id_pengurus}}</th>
             <th scope="row">
               <div class="media align-items-center">
                 <div class="media-body">

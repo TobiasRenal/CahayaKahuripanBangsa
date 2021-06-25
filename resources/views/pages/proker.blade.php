@@ -257,7 +257,7 @@
         <tbody>
         @foreach($proker as $prk)
           <tr>
-          <th>{{$prk->id_program}}</th>
+          <th>{{'PK-'.$prk->id_program}}</th>
             <th scope="row">
               <div class="media align-items-center">
                 <div class="media-body">
@@ -277,7 +277,7 @@
               {{$prk->kendala}}
             </td>
             <td>
-            {{$rl->role_name}}
+            {{$prk->role_id}}
             </td>
             <td class="text-right">
               <div class="dropdown">
