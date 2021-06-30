@@ -36,7 +36,7 @@
 
 <body>
                             <div class="card-header bg-transparent pb-5">
-                              <h2 class="text-center">Tambah Laporan Keuangan</h2>
+                              <h2 class="text-center">Rubah Laporan Keuangan</h2>
                             </div>
                             <div class="card-body px-lg-5 py-lg-5">
                             <form action="{{url('/datakeuangan/update')}}" enctype="multipart/form-data" method ="POST">

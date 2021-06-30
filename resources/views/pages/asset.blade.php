@@ -350,7 +350,7 @@
                                   <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="ni ni-single-02"></i></span>
                                   </div>
-                                  <input class="form-control" placeholder="Nama Asset" type="text" name="nama_assetWeb">
+                                  <input class="form-control" placeholder="Nama Asset" type="text" name="nama_assetWeb" required>
                                 </div>
                               </div>
                               <div class="form-group">
@@ -359,7 +359,7 @@
                                   <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
                                   </div>
-                                  <input class="form-control datepicker" placeholder="Select date" type="text" name="tanggal_assetWeb">
+                                  <input class="form-control datepicker" placeholder="Select date" type="text" name="tanggal_assetWeb" required>
                                 </div>
                               </div>
                               <div class="form-group">
@@ -367,7 +367,7 @@
                                   <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="ni ni-money-coins"></i></span>
                                   </div>
-                                  <input class="form-control" placeholder="Nilai Perolehan" type="text" name="nilai_perolehanWeb">
+                                  <input class="form-control" placeholder="Nilai Perolehan" type="text" name="nilai_perolehanWeb" required>
                                 </div>
                               </div>
                               <div class="form-group">
@@ -375,7 +375,7 @@
                                   <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="ni ni-paper-diploma"></i></span>
                                   </div>
-                                  <input class="form-control" placeholder="Asal asset" type="text" name="asal_assetWeb">
+                                  <input class="form-control" placeholder="Asal asset" type="text" name="asal_assetWeb" required>
                                 </div>
                               </div>
                               <div class="form-group">
@@ -383,11 +383,11 @@
                                   <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="ni ni-single-copy-04"></i></span>
                                   </div>
-                                  <input class="form-control" placeholder="Keterangan" type="text" name="keteranganWeb">
+                                  <input class="form-control" placeholder="Keterangan" type="text" name="keteranganWeb" required>
                                 </div>
                               </div>
                               <div>
-                                <select class="form-control" name="role_idWeb" aria-labelledby="role">
+                                <select class="form-control" name="role_idWeb" aria-labelledby="role" required>
                                 @foreach($role as $rl)
                                   <option value="{{$rl->role_id}}">{{$rl->role_name}}</option>
                                 @endforeach
@@ -459,12 +459,12 @@
                 </a>
                 <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
                   <a class="dropdown-item" href="{{ url('/dataasset/'.$set->id_asset) }}">Update</a>
-                  <a class="dropdown-item" data-toggle="modal" data-target="#response" href="#">Hapus</a>
+                  <a class="dropdown-item" data-toggle="modal" data-target="#response{{$set->id_asset}}" href="#">Hapus</a>
                 </div>
               </div>
             </td>
           </tr>
-          <div class="modal fade" id="response">
+          <div class="modal fade" id="response{{$set->id_asset}}">
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-header">

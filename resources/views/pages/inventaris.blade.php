@@ -351,7 +351,7 @@
                                   <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="ni ni-single-02"></i></span>
                                   </div>
-                                  <input class="form-control" placeholder="Nama Inventaris" type="text" name="nama_inventarisWeb">
+                                  <input class="form-control" placeholder="Nama Inventaris" type="text" name="nama_inventarisWeb" required>
                                 </div>
                               </div>
                               <div class="form-group">
@@ -360,7 +360,7 @@
                                   <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
                                   </div>
-                                  <input class="form-control datepicker" placeholder="Select date" type="text" name="tanggal_inventarisWeb">
+                                  <input class="form-control datepicker" placeholder="Select date" type="text" name="tanggal_inventarisWeb" required>
                                 </div>
                               </div>
                               <div class="form-group">
@@ -368,7 +368,7 @@
                                   <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="ni ni-money-coins"></i></span>
                                   </div>
-                                  <input class="form-control" placeholder="Nilai Perolehan" type="text" name="nilai_inventarisWeb">
+                                  <input class="form-control" placeholder="Nilai Perolehan" type="text" name="nilai_inventarisWeb"required>
                                 </div>
                               </div>
                               <div class="form-group">
@@ -376,7 +376,7 @@
                                   <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="ni ni-paper-diploma"></i></span>
                                   </div>
-                                  <input class="form-control" placeholder="Asal Inventaris" type="text" name="asal_inventarisWeb">
+                                  <input class="form-control" placeholder="Asal Inventaris" type="text" name="asal_inventarisWeb"required>
                                 </div>
                               </div>
                               <div class="form-group">
@@ -384,11 +384,11 @@
                                   <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="ni ni-single-copy-04"></i></span>
                                   </div>
-                                  <input class="form-control" placeholder="Keterangan" type="text" name="keteranganWeb">
+                                  <input class="form-control" placeholder="Keterangan" type="text" name="keteranganWeb" required>
                                 </div>
                               </div>
                               <div>
-                                <select class="form-control" name="role_idWeb" aria-labelledby="role">
+                                <select class="form-control" name="role_idWeb" aria-labelledby="role" required>
                                 @foreach($role as $rl)
                                   <option value="{{$rl->role_id}}">{{$rl->role_name}}</option>
                                 @endforeach
@@ -456,12 +456,12 @@
                 </a>
                 <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
                   <a class="dropdown-item" href="{{ url('/datainventaris/'.$inven->id_inventaris) }}">Update</a>
-                  <a class="dropdown-item" data-toggle="modal" data-target="#response" href="#">Hapus</a>
+                  <a class="dropdown-item" data-toggle="modal" data-target="#response{{$inven->id_inventaris}}" href="#">Hapus</a>
                 </div>
               </div>
             </td>
           </tr>
-            <div class="modal fade" id="response">
+            <div class="modal fade" id="response{{$inven->id_inventaris}}">
             <div class="modal-dialog modal-dialog-centered">
               <div class="modal-content">
                 <div class="modal-header">

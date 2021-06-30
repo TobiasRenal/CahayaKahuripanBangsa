@@ -349,7 +349,7 @@
                                   <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="ni ni-single-02"></i></span>
                                   </div>
-                                  <input class="form-control" placeholder="Nama Laporan" type="text" name="nama_keuanganWeb">
+                                  <input class="form-control" placeholder="Nama Laporan" type="text" name="nama_keuanganWeb" required>
                                 </div>
                               </div>
                               <div class="form-group">
@@ -358,7 +358,7 @@
                                   <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
                                   </div>
-                                  <input class="form-control datepicker" placeholder="Select date" type="text" name="tanggal_keuanganWeb">
+                                  <input class="form-control datepicker" placeholder="Select date" type="text" name="tanggal_keuanganWeb" required>
                                 </div>
                               </div>
                               <div class="form-group">
@@ -366,7 +366,7 @@
                                   <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
                                   </div>
-                                  <input class="form-control" placeholder="Jumlah" type="text" name="jumlahWeb">
+                                  <input class="form-control" placeholder="Jumlah" type="text" name="jumlahWeb" required>
                                 </div>
                               </div>
                               <div class="form-group">
@@ -374,11 +374,11 @@
                                   <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="ni ni-mobile-button"></i></span>
                                   </div>
-                                  <input class="form-control" placeholder="Keterangan" type="text" name="keteranganWeb">
+                                  <input class="form-control" placeholder="Keterangan" type="text" name="keteranganWeb" required>
                                 </div>
                               </div>
                               <div>
-                                <select class="form-control" name="role_idWeb" aria-labelledby="role">
+                                <select class="form-control" name="role_idWeb" aria-labelledby="role" required>
                                 @foreach($role as $rl)
                                   <option value="{{$rl->role_id}}">{{$rl->role_name}}</option>
                                 @endforeach
@@ -417,8 +417,11 @@
         </thead>
         <tbody>
         @foreach($keuangan as $uang)
+
           <tr>
-            <th>{{$uang->id_keuangan}}</th>
+            <th>
+              {{$uang->id_keuangan}}
+            </th>
             <th scope="row">
               <div class="media align-items-center">
                 <div class="media-body">
@@ -442,12 +445,13 @@
                 </a>
                 <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
                   <a class="dropdown-item" href="{{ url('/datakeuangan/'.$uang->id_keuangan) }}">Update</a>
-                  <a class="dropdown-item" data-toggle="modal" data-target="#response" href="#">Hapus</a>
+                  <a class="dropdown-item" data-toggle="modal" data-target="#response{{$uang->id_keuangan}}" href="#">Hapus</a>
                 </div>
               </div>
             </td>
           </tr>
-        <div class="modal fade" id="response">
+
+        <div class="modal fade" id="response{{$uang->id_keuangan}}">
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-header">

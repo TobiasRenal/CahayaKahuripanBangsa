@@ -36,7 +36,7 @@
 
 <body>
                         <div class="card-header bg-transparent pb-5">
-                              <h2 class="text-center">Tambah Data Inventaris</h2>
+                              <h2 class="text-center">Rubah Data Inventaris</h2>
                             </div>
                             <div class="card-body px-lg-5 py-lg-5">
                             <form action="{{url('/datainventaris/update')}}" enctype="multipart/form-data" method ="POST">
