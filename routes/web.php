@@ -86,6 +86,9 @@ Auth::routes();
 
 Route::get('/home', 'App\Http\Controllers\HomeController@index')->name('home');
 
+//Register
+Route::get('/dataregister', 'App\Http\Controllers\Auth\RegisterController@index');
+
 //Pengurus
 Route::get('/datapengurus', [PengurusController::class, 'index']);
 Route::get('/datapengurus/{id}', [PengurusController::class, 'details']);
